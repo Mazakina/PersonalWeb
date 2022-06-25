@@ -1,0 +1,50 @@
+.header{
+    height: 100vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    writing-mode: vertical-lr;
+    padding: 0vh 1.5vh 0 0;
+    position: absolute;
+    left: 3.5vw;
+    margin-left: 1rem;
+    color: white;
+    z-index: 9;
+  
+    &::before{
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      width: 1px;
+      height: 95vh;
+      border-left: 2px solid rgb(181, 181, 181);
+    }
+      &:first-child{
+        font-family: anton;
+        letter-spacing: .2rem;
+     }
+  
+    div{
+      a{
+        font-size: 1.125rem;
+        margin-top: 2rem;
+      }
+  
+      &:last-child{
+        font-family: fascinate;
+        letter-spacing: -.0rem;
+        font-size: 1.125rem;
+        margin-bottom: 3rem;
+        .VscGithub{
+          font-size: 1.5rem;
+          color:var(--orange);
+          transform:rotateX(30%);
+          display: none;
+        }
+        span{
+          color:var(--orange);
+        }
+      }
+    }
+  }
