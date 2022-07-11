@@ -56,7 +56,7 @@ export default function Projects(){
       <div className={styles.projectsDisplay}>
 {/* display selected */}
         <motion.div  className={styles.activeLayer}>
-          <Image src={allProjects[currentDisplay].backgroundImg}  alt=""/>
+          <Image  layout="fill"  height='100%'src={allProjects[currentDisplay].backgroundImg}  alt=""/>
           <div className={styles.descriptionBox}>
             <h2>
               IgNews
@@ -72,31 +72,31 @@ export default function Projects(){
               <button>GitHub</button>
             </div>
           </div>
-          <button onClick={()=>setActive(true)} > <Image src="/images/shelfIcon.svg" alt="" /></button>
+          <button onClick={()=>setActive(true)} > <Image width='32' height='32' src="/images/shelfIcon.svg" alt="" /></button>
         </motion.div>
 
 {/* display all */}
         <a href="#"  onClick={()=>{onClickSetDisplay(0)}} className={`${styles.firstLayer} +  ${(active ? '':styles.deactive)}`}>
-            <Image src={allProjects[0].backgroundImg} alt="" />
+            <Image className={styles.layerImage} layout="fill"src={allProjects[0].backgroundImg} alt="" />
         </a>
 
         <a href="#"   onClick={()=>{onClickSetDisplay(1)}} className={`${styles.secondLayer} +  ${(active ? '':styles.deactive)}`}>
-          <div>
-            <Image src={allProjects[1].backgroundImg} alt=""/>
+          <div className={styles.identifier}>
+            <Image className={styles.layerImage} layout='fill'src={allProjects[1].backgroundImg} alt=""/>
             <h3>HTML & CSS</h3>
           </div>
         </a>
 
         <a href="#" onClick={()=>{onClickSetDisplay(2)}} className={`${styles.thirdLayer} +  ${(active ? '':styles.deactive)}`}>
-          <div>
-            <Image src={allProjects[2].backgroundImg} alt=""/>
+          <div className={styles.identifier}>
+            <Image className={styles.layerImage} layout="fill" src={allProjects[2].backgroundImg} alt=""/>
             <h3>Java Script</h3>
           </div>       
         </a>
         
         <a href="#" onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)}`}>    
-          <div>
-            <Image src={allProjects[3].backgroundImg} alt="" />
+          <div className={styles.identifier}>
+            <Image  className={styles.layerImage} layout='fill' src={allProjects[3].backgroundImg} alt="" />
             <h3>React JS</h3>
           </div>    
         </a>
