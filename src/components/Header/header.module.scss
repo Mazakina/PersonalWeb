@@ -56,6 +56,7 @@
     
       span{
         color:var(--orange);
+        margin-bottom: -20px;
       }
     }
   }
@@ -65,8 +66,9 @@
 .svg{
   font-size: 1.5rem;
   color:var(--orange);
-  transform:rotateX(30%);
+  transform:rotateX(30%) translateY(-5px);
 }
+
 
 
 
