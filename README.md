@@ -1,34 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+Essa é forma atual de apresentar meus projetos e habilidades.
+Framer motion forneceu muitas opções animadas de maneira simples, o que me permitiu expressar minhas ideias de maneira mais criativa. É um projeto em andamento, então fique de olho nele, ter alguma mudança em alguns dias (vou adicionar uma seção para me enviar opiniões e ideias).
 
-First, run the development server:
+Tecnologias: HTML5, CSS3, ReactJs, NextJs.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+My current way to showcase my projects and skills.
+Framer motion provided a lot of animated options in simple way, which allowed me to express different ways to show my ideas. It's an ongoing project, so keep an eye on it, may change every few days (there will be an section to send me your's opnions and ideas).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Tecnologies: HTML5, CSS3, ReactJs, NextJs.
