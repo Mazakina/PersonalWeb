@@ -1,0 +1,15 @@
+.tool{
+  width:3rem;
+  height: 3rem;
+  z-index: 13;
+  padding: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  background-color:rgb(58, 58, 58);
+  border-radius:5px;
+  margin-top: 1rem;
+
+  img{
+    width: 100%;
+  }
+}

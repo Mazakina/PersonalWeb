@@ -1,0 +1,24 @@
+.aboutMe{
+  height: 100vh;
+  width: 100vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: #090D11;
+
+  h2{
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    font-family: anton;
+    letter-spacing:.2rem;
+    margin-left: 22vw;
+  }
+  .aboutBox{
+    width:60vw;
+    height:50vh;
+    background-color: #77ffef52;
+    border-radius: 5px;
+    margin-bottom:5rem;
+  }
+}

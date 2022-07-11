@@ -1,0 +1,287 @@
+.deactive{
+  width:100% !important;
+  transition: all 0.5s ease-in-out;
+  opacity:0 !important; 
+  visibility:hidden;
+  cursor:default;
+}
+
+.projects{
+  display:flex;
+  flex-flow: column;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  background-color:#090D11;
+  width: 100vw;
+
+  // background-image: url('/images/Back.png');
+  // background-position: center -5rem;
+  // background-repeat: no-repeat;
+  // background-size:1920px;
+  
+  h1{
+    font-family: anton;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    margin-top:7rem;
+    color: #C5C5C5;
+    letter-spacing: 0.05em;
+    span{
+      color: #FF5C28;
+    }
+  }
+
+  .underline{
+    border-bottom: 3px solid white;
+    border-radius: 2px;
+    width:70px;
+    margin-left:-.7rem;
+  }
+  .underlineTwo{
+    border-bottom: 3px solid white;
+    border-radius: 2px;
+    width:70px;
+    margin-left:auto;
+    margin-right: -.4rem;
+    margin-top: 0.4rem;
+  }
+
+ 
+
+  .projectsDisplay{
+    max-width: 80rem;
+    width: 80vw;
+    height: 35rem;
+    align-self: center;
+    margin: 7vh 0 0 ;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    position: relative;
+    border-top: 3px solid #FF3D00;
+    border-bottom: 3px solid #FF3D00;
+    border-right: 3px solid #FF5C28;
+    border-left: 3px solid #FF5C28;
+    border-radius: 5px;
+    transition: all  1s ease-in-out;
+
+
+    .activeLayer{
+      width: 100%;
+      height:100%;
+      position: absolute;
+
+      .descriptionBox{
+        width:40%;
+        min-width: 500px;
+        height: 100%;
+        background-color: rgba(2, 2, 2, 0.897) ;
+        position: absolute;
+        right: 0;
+        bottom:0;
+        border-radius: 10px 10px 0 0;
+        display:flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content:flex-start;
+        transform: translateX(calc(100% - 5rem));
+        transition: all 1s ease-in-out;
+        border-left: 2px solid #ff7045;
+
+        &:hover{
+          transform: translateX(0%);
+
+        }
+
+        .iconComponent{
+          position: absolute;
+          left: 1rem;
+          bottom: 0;
+        }
+
+        h2{
+          margin: .4rem ;
+          color: rgb(255, 255, 255);
+          
+        }
+        p{
+          margin:1rem 5rem 1rem 5rem;
+          color: rgb(255, 255, 255);
+          font-size:1.3rem;
+        }
+
+        >div{
+          margin: auto 0 2rem;
+          >button{
+            padding:.5rem;
+            font-weight: bold;
+            background:transparent;
+            color: #ff7045;
+            border:1px solid #ff7045;
+            border-radius: 10px;
+            margin-right: 1rem;
+            cursor: pointer;
+          }
+        }
+      }
+      >img{
+        width:1440px;
+        height: 100%;
+
+      }
+      >button{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        right: 1rem;
+        top:1rem;
+        border:none;
+        border-radius:5px;
+        background: rgba(80, 80, 80, 0.637);
+
+        &:hover{
+          filter: brightness(1.3);
+        }
+        cursor:pointer;
+        img{
+          width: 1.7rem;
+          height: 1.7rem;
+        }
+      }
+    }
+
+    .firstLayer{
+      position: absolute;
+      display:block;
+      width:inherit;
+      height: 100%;
+      background-color:rgb(206, 206, 206);
+      z-index: 3;
+      transition: all  0.7s ease-in-out;
+      >img{
+        position: absolute;
+        width:1440px;
+        right:0;
+        filter:blur(4px);
+        left:0;
+        top:0;
+        z-index: 3;
+      }
+    }
+
+    .secondLayer{
+      position: absolute;
+      width:80%;
+      height:100%;
+      right:0;
+      background-color:rgb(150, 150, 150);
+      transform:skew(-25deg,0);
+      border-left: 3px solid #FF3D00;
+      overflow:hidden;
+      transition: all  0.7s ease-in-out;
+      z-index: 4;
+
+        >div{
+          transform:skew(25deg,0);
+          transition: all .5s ease-in-out;
+        }
+          h3{
+            writing-mode: vertical-rl;
+            position: absolute;
+            transform:
+            scalex(-1) scaley(-1)
+            rotate(25deg); 
+            text-orientation: mixed;
+            left: -4rem;
+            z-index: 20;
+            top:100px;
+            height:7rem;
+          }
+          img{
+            position: absolute;
+            width:1440px;
+            right:0;
+            filter:blur(4px)
+          }
+
+
+    }
+
+    .thirdLayer{
+      position: absolute;
+      width:52.5%;
+      height:100%;
+      right:0;
+      transform:skew(-25deg,0);
+      background-color:rgb(97, 97, 97);
+      border-left: 3px solid #FF3D00;
+      overflow:hidden;
+      transition: all  0.7s ease-in-out;
+      z-index: 5;
+       >div{
+        transform:skew(25deg,0);
+        transition: all .5s ease-in-out;
+        h3{
+          writing-mode: vertical-rl;
+          position: absolute;
+          transform:
+          scalex(-1) scaley(-1)
+          rotate(25deg); 
+          text-orientation: mixed;
+          left: -4rem;
+          z-index: 20;
+          top:100px;
+          height:7rem;
+        }
+        >img{
+        position: absolute;
+        width:1440px;
+        right:0;
+        filter:blur(3px);
+        }
+      }
+    
+    }
+    .fourthLayer{
+      position: absolute;
+      width:calc( 25% + 8rem);
+      height:100%;
+      right:-8rem;
+      transform:skew(-25deg,0);
+      background-color:gray;
+      overflow: hidden;
+      border-left: 3px solid #FF3D00;
+      overflow:hidden;
+      transition: all  0.7s ease-in-out;
+      z-index: 6;
+      div{
+        transform:skew(25deg,0);
+      }
+      h3{
+        writing-mode: vertical-rl;
+        position: absolute;
+        transform:
+        scalex(-1) scaley(-1)
+        rotate(25deg); 
+        text-orientation: mixed;
+        left: -4rem;
+        z-index: 20;
+        top:100px;
+        height:7rem;
+      }
+      img{
+        position: absolute;
+        width:1440px;
+        right:0;
+        filter:blur(4px);
+      }
+    }
+  }
+
+
+}
+
