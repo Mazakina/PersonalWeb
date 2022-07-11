@@ -1,31 +1,31 @@
 import { ReactElement } from "react";
 import styles from './SvgTriangle.module.scss'
 interface SvgTriangleProps{
-    Tz:any;
+    sizeMultiplier:any;
     className?:string;
     polygonClass?: string;
     colors:{
-        fC:string;
-        sC:string;
+        firstColor:string;
+        secondColor:string;
     };
     offset:{
-        fC:string;
-        sC:string;
+        firstColor:string;
+        secondColor:string;
     }
     children?: ReactElement;
 }
 
-export function SvgTriangle({className,Tz , children, colors,offset}:SvgTriangleProps){
+export function SvgTriangle({className,sizeMultiplier , children, colors,offset}:SvgTriangleProps){
 
 
     const urlStroke= `url(#${className})`
-    const triangleSize = `${(20*Tz)} ${3*Tz}, ${30*Tz} ${20*Tz}, ${10*Tz} ${20*Tz}`;
+    const triangleSize = `${(20*sizeMultiplier)} ${3*sizeMultiplier}, ${30*sizeMultiplier} ${20*sizeMultiplier}, ${10*sizeMultiplier} ${20*sizeMultiplier}`;
             return(
                 <svg height="500" width={"500"} className={className}>
                     <defs>
                         <linearGradient id={className} x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset={offset.fC} stop-color={colors.fC}/>
-                            <stop offset={offset.sC} stop-color={colors.sC}/>
+                            <stop offset={offset.firstColor} stopColor={colors.firstColor}/>
+                            <stop offset={offset.secondColor} stopColor={colors.secondColor}/>
                         </linearGradient>
                     </defs>
                     <a href="https://www.google.com" id="a" className={styles.aref} target="_blank">

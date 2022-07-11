@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { useState } from 'react';
 import styles from './Grid.module.scss'
 
-export default function grid({...rest}:any){
+export default function Grid({...rest}:any){
 
  
 
-    let triangleBase=3.8;
-    const triangleSize = `${(20*triangleBase)} ${20*triangleBase}, ${30*triangleBase} ${3*triangleBase}, ${10*triangleBase} ${3*triangleBase}`;
-    const triangleSize2 = `${(20*triangleBase+100)} ${20*triangleBase}, ${30*triangleBase+100} ${3*triangleBase}, ${10*triangleBase+100} ${3*triangleBase}`;
-    const triangleSize3 = `${(20*triangleBase+50)} ${5*triangleBase}, ${30*triangleBase+50} ${22*triangleBase}, ${10*triangleBase+50} ${22*triangleBase}`;
+    let sizeMultiplier=3.8;
+    const triangleSize = `${(20*sizeMultiplier)} ${20*sizeMultiplier}, ${30*sizeMultiplier} ${3*sizeMultiplier}, ${10*sizeMultiplier} ${3*sizeMultiplier}`;
+    const triangleSize2 = `${(20*sizeMultiplier+100)} ${20*sizeMultiplier}, ${30*sizeMultiplier+100} ${3*sizeMultiplier}, ${10*sizeMultiplier+100} ${3*sizeMultiplier}`;
+    const triangleSize3 = `${(20*sizeMultiplier+50)} ${5*sizeMultiplier}, ${30*sizeMultiplier+50} ${22*sizeMultiplier}, ${10*sizeMultiplier+50} ${22*sizeMultiplier}`;
 
     const [hoverIcon, setHoverIcon] = useState(true)
     return(
@@ -18,8 +18,8 @@ export default function grid({...rest}:any){
                     <svg height="120" width={"300"} className={styles.container}>
                         <defs>
                             <linearGradient id={'urlStroke'} x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset={'0%'} stop-color={'#292929'}/>
-                                <stop offset={'100%'} stop-color={'#292929'}/>
+                                <stop offset={'0%'} stopColor={'#292929'}/>
+                                <stop offset={'100%'} stopColor={'#292929'}/>
                             </linearGradient>
                         </defs> 
                             <Link href="/projects"  className={styles.triangleChild} >
@@ -47,8 +47,8 @@ export default function grid({...rest}:any){
                     <svg height="120" width={"300"} className={styles.container}>
                         <defs>
                             <linearGradient id={'urlStroke'} x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset={'0%'} stop-color={'#292929'}/>
-                                <stop offset={'100%'} stop-color={'#292929'}/>
+                                <stop offset={'0%'} stopColor={'#292929'}/>
+                                <stop offset={'100%'} stopColor={'#292929'}/>
                             </linearGradient>
                         </defs>
                         <Link href="/projects" passHref={true}  >
@@ -97,8 +97,8 @@ export default function grid({...rest}:any){
                     <svg height="120" width={"300"} className={styles.container}>
                         <defs>
                             <linearGradient id={'urlStroke'} x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset={'0%'} stop-color={'#292929'}/>
-                                <stop offset={'100%'} stop-color={'#292929'}/>
+                                <stop offset={'0%'} stopColor={'#292929'}/>
+                                <stop offset={'100%'} stopColor={'#292929'}/>
                             </linearGradient>
                         </defs>
                         <Link href="/projects"  passHref={true} >

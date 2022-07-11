@@ -19,8 +19,8 @@ export default function Header (){
     return(
         <header className={styles.header}>
             <div>
-                <a target="_blank" href="https://github.com/Mazakina"><span>&lt; </span>Git <img className={styles.svg} src='/images/github2.svg'/> Hub<span> &gt;</span></a>
-                <a target="_blank" href="https://www.linkedin.com/in/paulo-mazakina-1236811b4/">LINKED IN</a>
+                <a target="_blank"  rel="noreferrer" href="https://github.com/Mazakina"><span>&lt; </span>Git <img className={styles.svg} src='/images/github2.svg'/> Hub<span> &gt;</span></a>
+                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/paulo-mazakina-1236811b4/">LINKED IN</a>
             </div>
             <div className={styles.homeButton}  >
              <Link href="/">HOME</Link>
