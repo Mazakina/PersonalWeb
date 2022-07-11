@@ -29,7 +29,7 @@ export function SvgTriangle({className,sizeMultiplier , children, colors,offset}
                         </linearGradient>
                     </defs>
                     <a href="" id="a" className={styles.aref}>
-                        <polygon stroke-linejoin="round" points={triangleSize}  stroke={urlStroke} strokeWidth=".5rem" fill="none"  />
+                        <polygon strokeLinejoin="round" points={triangleSize}  stroke={urlStroke} strokeWidth=".5rem" fill="none"  />
                     </a>
                         {children}
                 </svg>   
