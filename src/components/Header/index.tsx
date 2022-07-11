@@ -17,10 +17,13 @@ export default function Header (){
         window.addEventListener("load", handleResize, false);
     }
 
+    const gitStyle={
+        marginBottom:'-1px',
+    }
     return(
         <header className={styles.header}>
             <div>
-                <a target="_blank"  rel="noreferrer" href="https://github.com/Mazakina"><span>&lt; </span>Git <Image  width='24' height='24' className={styles.svg} src='/images/github2.svg'/> Hub<span> &gt;</span></a>
+                <a target="_blank"  rel="noreferrer" href="https://github.com/Mazakina"><span>&lt; </span>Git <Image style={gitStyle} width='24' height='24' className={styles.svg} src='/images/github2.svg'/> Hub<span> &gt;</span></a>
                 <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/paulo-mazakina-1236811b4/">LINKED IN</a>
             </div>
             <div className={styles.homeButton}  >

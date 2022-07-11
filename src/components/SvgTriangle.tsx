@@ -28,7 +28,7 @@ export function SvgTriangle({className,sizeMultiplier , children, colors,offset}
                             <stop offset={offset.secondColor} stopColor={colors.secondColor}/>
                         </linearGradient>
                     </defs>
-                    <a href="https://www.google.com" id="a" className={styles.aref} target="_blank">
+                    <a href="" id="a" className={styles.aref}>
                         <polygon stroke-linejoin="round" points={triangleSize}  stroke={urlStroke} strokeWidth=".5rem" fill="none"  />
                     </a>
                         {children}
