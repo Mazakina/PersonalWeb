@@ -31,7 +31,7 @@ export default function Tool({imgArray}:toolProps) {
       {
         newArray.map((tool)=>{
           return(
-            <div className={styles.tool}>
+            <div key={tool.id} className={styles.tool}>
               <img src={tool.img} alt="" />
             </div>
           )
