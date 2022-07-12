@@ -1,6 +1,6 @@
 
 .animatedSeven{
-  transition: all  0.5s ease-in-out;
+  transition: width opacity visibility  0.5s ease-in-out;
 }
 
 .animatedOne{
@@ -8,7 +8,7 @@
 }
 
 .animatedFive{
-  transition: all .5s ease-in-out;
+  transition: width opacity visibility .5s ease-in-out;
 }
 
 .deactive{
