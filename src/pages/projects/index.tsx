@@ -51,7 +51,7 @@ export default function Projects(){
   }
   
 useEffect(() => {
-  if(asPath== 'projects'){
+  if(asPath== '/projects'){
     setAnimated(true)
 
   }else{
