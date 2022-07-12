@@ -34,6 +34,9 @@ a {
   box-sizing: border-box;
 }
 
+
+/* fix for framer motion not being full compatible with scss modules*/
+
 #projectsDisplay{
   max-width: 80rem;
   width: 80vw;
@@ -121,4 +124,17 @@ a {
   overflow: hidden;
   border-left: 3px solid #FF3D00;
   overflow:hidden;
+}
+#fourthLayer #identifier{
+  transform:skew(25deg,0) translatex(-100px);
+  height: 100%;
+  width: 120%;
+  margin-left: -2rem;
+}
+
+#thirdLayer #identifier Image{
+  position: absolute;
+  width:1440px;
+  right:0;
+  filter:blur(4px);
 }
