@@ -89,25 +89,25 @@ useEffect(() => {
         </div>
 
 {/* display all */}
-        <a href="#"  onClick={()=>{onClickSetDisplay(0)}} className={`${styles.firstLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
+        <a href="#" id='firstLayer' onClick={()=>{onClickSetDisplay(0)}} className={`${styles.firstLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
             <Image className={styles.layerImage} layout="fill"src={allProjects[0].backgroundImg} alt="" />
         </a>
 
-        <a href="#"   onClick={()=>{onClickSetDisplay(1)}} className={`${styles.secondLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
+        <a href="#"  id='secondLayer' onClick={()=>{onClickSetDisplay(1)}} className={`${styles.secondLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
           <div className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
             <Image className={styles.layerImage} layout='fill'src={allProjects[1].backgroundImg} alt=""/>
             <h3>HTML & CSS</h3>
           </div>
         </a>
 
-        <a href="#" onClick={()=>{onClickSetDisplay(2)}} className={`${styles.thirdLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
+        <a href="#" id='thirdLayer' onClick={()=>{onClickSetDisplay(2)}} className={`${styles.thirdLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
           <div className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
             <Image className={styles.layerImage} layout="fill" src={allProjects[2].backgroundImg} alt=""/>
             <h3>Java Script</h3>
           </div>       
         </a>
         
-        <a href="#" onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>    
+        <a href="#"  id='fourthLayer' onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>    
           <div className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
             <Image  className={styles.layerImage} layout='fill' src={allProjects[3].backgroundImg} alt="" />
             <h3>React JS</h3>
