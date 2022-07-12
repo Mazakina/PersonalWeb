@@ -6,25 +6,12 @@ import Transition from '../components/Transition'
 import Router ,{ useRouter } from 'next/router'
 import { AnimatePresence, motion, useCycle  } from 'framer-motion'
 import { AppProps } from 'next/app'
+import { useTransitionFix } from '../hooks/useTransitionFix'
 
 
 function MyApp({ Component, pageProps }:AppProps ) {
 
-  const routeChange = () => {
-    // Temporary fix to avoid flash of unstyled content
-
-
-    const tempFix = () => {
-      const allStyleElems = document.querySelectorAll('style[media="x"]');
-      allStyleElems.forEach((elem) => {
-        elem.removeAttribute("media");
-      });
-    };
-    tempFix();
-  };
-
-   Router.events.on("routeChangeComplete", routeChange );
-   Router.events.on("routeChangeStart", routeChange );
+useTransitionFix()
 
   const {asPath} = useRouter()
   const [opacity, cycle ] = useCycle(0, 50, 100)
