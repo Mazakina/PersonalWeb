@@ -94,21 +94,21 @@ useEffect(() => {
         </a>
 
         <a href="#"  id='secondLayer' onClick={()=>{onClickSetDisplay(1)}} className={`${styles.secondLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
-          <div className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
+          <div id='identifier' className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
             <Image className={styles.layerImage} layout='fill'src={allProjects[1].backgroundImg} alt=""/>
             <h3>HTML & CSS</h3>
           </div>
         </a>
 
         <a href="#" id='thirdLayer' onClick={()=>{onClickSetDisplay(2)}} className={`${styles.thirdLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
-          <div className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
+          <div id='identifier' className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
             <Image className={styles.layerImage} layout="fill" src={allProjects[2].backgroundImg} alt=""/>
             <h3>Java Script</h3>
           </div>       
         </a>
         
         <a href="#"  id='fourthLayer' onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>    
-          <div className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
+          <div id='identifier' className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
             <Image  className={styles.layerImage} layout='fill' src={allProjects[3].backgroundImg} alt="" />
             <h3>React JS</h3>
           </div>    

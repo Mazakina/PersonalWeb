@@ -85,3 +85,40 @@ a {
   height: 100%;
   width: 100%;
 }
+
+#thirdLayer{
+  position: absolute;
+  width:52.5%;
+  height:100%;
+  right:0;
+  transform:skew(-25deg,0);
+  background-color:rgb(97, 97, 97);
+  border-left: 3px solid #FF3D00;
+  overflow:hidden;
+  z-index: 5;
+}
+#thirdLayer #identifier{
+    transform:skew(25deg,0) translatex(-100px);
+    height: 100%;
+    width: 120%;
+    margin-left: -2rem;
+}
+
+#thirdLayer #identifier Image{
+  position: absolute;
+  width:1440px;
+  right:0;
+  filter:blur(3px);
+}
+
+#fourthLayer{
+  position: absolute;
+  width:calc( 25% + 8rem);
+  height:100%;
+  right:-8rem;
+  transform:skew(-25deg,0);
+  background-color:gray;
+  overflow: hidden;
+  border-left: 3px solid #FF3D00;
+  overflow:hidden;
+}
