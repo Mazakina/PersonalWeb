@@ -54,6 +54,9 @@ a {
   transition:all 2s ease-in-out;
 }
 
+#activeLayer{
+  transition:all 2s ease-in-out;
+}
 #firstLayer{
   position: absolute;
   display:block;

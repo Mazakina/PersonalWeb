@@ -68,7 +68,7 @@ useEffect(() => {
 
       <div id='projectsDisplay' className={`${styles.projectsDisplay}  + ${(animated ? styles.animatedOne:'')}`}>
 {/* display selected */}
-        <div  className={styles.activeLayer}>
+        <div id='activeLayer' className={styles.activeLayer}>
           <Image  layout="fill"  height='100%'src={allProjects[currentDisplay].backgroundImg}  alt=""/>
           <div className={`${styles.descriptionBox} + ${(animated ? styles.animatedOne:'')}`}>
             <h2>
