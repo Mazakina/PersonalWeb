@@ -55,9 +55,9 @@ export default function Projects(){
 
       <div className={styles.projectsDisplay}>
 {/* display selected */}
-        <div  className={styles.activeLayer}>
+        <motion.div  className={styles.activeLayer}>
           <Image  layout="fill"  height='100%'src={allProjects[currentDisplay].backgroundImg}  alt=""/>
-          <div className={styles.descriptionBox}>
+          <motion.div  className={styles.descriptionBox}>
             <h2>
               IgNews
             </h2>
@@ -71,35 +71,35 @@ export default function Projects(){
               <button><a target="_blank"  rel="noreferrer" href={allProjects[currentDisplay].site}>Visite o site</a></button>
               <button>GitHub</button>
             </div>
-          </div>
+          </motion.div>
           <button onClick={()=>setActive(true)} > <Image width='32' height='32' src="/images/shelfIcon.svg" alt="" /></button>
-        </div>
+        </motion.div>
 
 {/* display all */}
-        <a href="#"  onClick={()=>{onClickSetDisplay(0)}} className={`${styles.firstLayer} +  ${(active ? '':styles.deactive)}`}>
+        <motion.a href="#"  onClick={()=>{onClickSetDisplay(0)}} className={`${styles.firstLayer} +  ${(active ? '':styles.deactive)}`}>
             <Image className={styles.layerImage} layout="fill"src={allProjects[0].backgroundImg} alt="" />
-        </a>
+        </motion.a>
 
-        <a href="#"   onClick={()=>{onClickSetDisplay(1)}} className={`${styles.secondLayer} +  ${(active ? '':styles.deactive)}`}>
+        <motion.a href="#"   onClick={()=>{onClickSetDisplay(1)}} className={`${styles.secondLayer} +  ${(active ? '':styles.deactive)}`}>
           <div className={styles.identifier}>
             <Image className={styles.layerImage} layout='fill'src={allProjects[1].backgroundImg} alt=""/>
             <h3>HTML & CSS</h3>
           </div>
-        </a>
+        </motion.a>
 
-        <a href="#" onClick={()=>{onClickSetDisplay(2)}} className={`${styles.thirdLayer} +  ${(active ? '':styles.deactive)}`}>
+        <motion.a href="#" onClick={()=>{onClickSetDisplay(2)}} className={`${styles.thirdLayer} +  ${(active ? '':styles.deactive)}`}>
           <div className={styles.identifier}>
             <Image className={styles.layerImage} layout="fill" src={allProjects[2].backgroundImg} alt=""/>
             <h3>Java Script</h3>
           </div>       
-        </a>
+        </motion.a>
         
-        <a href="#" onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)}`}>    
+        <motion.a href="#" onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)}`}>    
           <div className={styles.identifier}>
             <Image  className={styles.layerImage} layout='fill' src={allProjects[3].backgroundImg} alt="" />
             <h3>React JS</h3>
           </div>    
-        </a>
+        </motion.a>
       </div>
       
     </section>

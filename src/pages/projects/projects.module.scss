@@ -1,5 +1,6 @@
 .deactive{
   width:100% !important;
+  // transition: all 0.5s ease-in-out;
   opacity:0 !important; 
   visibility:hidden;
   cursor:default;
@@ -63,6 +64,7 @@
     border-right: 3px solid #FF5C28;
     border-left: 3px solid #FF5C28;
     border-radius: 5px;
+    // transition: all  1s ease-in-out;
 
 
     .activeLayer{
@@ -84,7 +86,7 @@
         align-items: center;
         justify-content:flex-start;
         transform: translateX(calc(100% - 5rem));
-        transition: all 1s ease-in-out;
+        // transition: all 1s ease-in-out;
         border-left: 2px solid #ff7045;
 
         &:hover{
@@ -159,6 +161,7 @@
       height: 100%;
       background-color:rgb(206, 206, 206);
       z-index: 3;
+      // transition: all  0.7s ease-in-out;
       >Image{
         position: absolute;
         width:1440px;
@@ -179,11 +182,13 @@
       transform:skew(-25deg,0);
       border-left: 3px solid #FF3D00;
       overflow:hidden;
+      // transition: all  0.7s ease-in-out;
       z-index: 4;
 
         >.identifier{
           transform:skew(25deg,0) translatex(-200px);
-            height: 100%;
+          // transition: all .5s ease-in-out;
+          height: 100%;
           width: 100%;
         }
           h3{
@@ -218,9 +223,11 @@
       background-color:rgb(97, 97, 97);
       border-left: 3px solid #FF3D00;
       overflow:hidden;
+      // transition: all  0.7s ease-in-out;
       z-index: 5;
       >.identifier{
         transform:skew(25deg,0) translatex(-100px);
+        // transition: all .5s ease-in-out;
         height: 100%;
         width: 120%;
         margin-left: -2rem;
@@ -255,9 +262,11 @@
       overflow: hidden;
       border-left: 3px solid #FF3D00;
       overflow:hidden;
+      // transition: all  0.7s ease-in-out;
       z-index: 6;
       >.identifier{
         transform:skew(25deg,0) translatex(-100px);
+        // transition: all .5s ease-in-out;
         height: 100%;
         width: 120%;
         margin-left: -2rem;
