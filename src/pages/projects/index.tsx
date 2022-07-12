@@ -40,7 +40,7 @@ export default function Projects(){
       language: 'React JS',
       site:'',
   }]
-  const [animated,setAnimated]= useState(false)
+  const [animated,setAnimated]= useState(true)
   const [active, setActive]= useState(true)
   const [currentDisplay,setCurrentDisplay] = useState(0)
 
@@ -51,8 +51,13 @@ export default function Projects(){
   }
   
 useEffect(() => {
-  setTimeout(()=>{setAnimated(true)}, 100)
-},[])
+  if(asPath== 'projects'){
+    setAnimated(true)
+
+  }else{
+    setAnimated(false)
+  }
+},[asPath])
 
   return(
     <section className={styles.projects}>
