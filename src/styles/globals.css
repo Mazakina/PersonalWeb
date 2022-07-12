@@ -37,61 +37,17 @@ a {
 
 /* fix for framer motion not being full compatible with scss modules*/
 
-#projectsDisplay{
- 
-  transition:all 2s ease-in-out;
-}
-
-#activeLayer{
-  transition:all 2s ease-in-out;
-}
-
-#descriptionBox{
-  transition:all 2s ease-in-out;
-}
-#firstLayer{
- 
-  transition:all 2s ease-in-out;
-}
-#firstLayer Image{
-  
-  transition:all 2s ease-in-out;
-}
-
-#secondLayer{
-  
-  transition:all 2s ease-in-out;
-}
-
-#secondLayer #identifier{
-  
-  transition:all 2s ease-in-out;
-}
-
-#thirdLayer{
- 
-  transition:all 2s ease-in-out;
-}
-#thirdLayer #identifier{
-    
-    transition:all 2s ease-in-out;
-  }
-
+#projectsDisplay,
+#activeLayer,
+#descriptionBox,
+#firstLayer,
+#firstLayer Image,
+#secondLayer,
+#secondLayer #identifier,
+#thirdLayer,
+#thirdLayer #identifier,
+#thirdLayer #identifier Image,
+#fourthLayer#fourthLayer #identifier,
 #thirdLayer #identifier Image{
-  
-  transition:all 2s ease-in-out;
-}
-
-#fourthLayer{
-  
-  transition:all 2s ease-in-out;
-}
-#fourthLayer #identifier{
-  
-  transition:all 2s ease-in-out;
-}
-
-#thirdLayer #identifier Image{
-  
   transition:all 2s ease-in-out;
 }
