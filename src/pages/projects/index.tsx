@@ -40,7 +40,7 @@ export default function Projects(){
       language: 'React JS',
       site:'',
   }]
-  const [animated,setAnimated]= useState(false)
+  const [animated,setAnimated]= useState(true)
   const [active, setActive]= useState(true)
   const [currentDisplay,setCurrentDisplay] = useState(0)
 
