@@ -38,19 +38,7 @@ a {
 /* fix for framer motion not being full compatible with scss modules*/
 
 #projectsDisplay{
-  max-width: 80rem;
-  width: 80vw;
-  height: 35rem;
-  align-self: center;
-  margin: 7vh 0 0 ;
-  background-color: rgb(255, 255, 255);
-  overflow: hidden;
-  position: relative;
-  border-top: 3px solid #FF3D00;
-  border-bottom: 3px solid #FF3D00;
-  border-right: 3px solid #FF5C28;
-  border-left: 3px solid #FF5C28;
-  border-radius: 5px;
+ 
   transition:all 2s ease-in-out;
 }
 
@@ -62,97 +50,48 @@ a {
   transition:all 2s ease-in-out;
 }
 #firstLayer{
-  position: absolute;
-  display:block;
-  width:inherit;
-  height: 100%;
-  background-color:rgb(206, 206, 206);
-  z-index: 3;
+ 
   transition:all 2s ease-in-out;
 }
 #firstLayer Image{
-  position: absolute;
-  width:1440px;
-  right:0;
-  filter:blur(4px);
-  left:0;
-  top:0;
-  z-index: 3;
+  
   transition:all 2s ease-in-out;
 }
 
 #secondLayer{
-  position: absolute;
-  width:80%;
-  height:100%;
-  right:0;
-  background-color:rgb(150, 150, 150);
-  transform:skew(-25deg,0);
-  border-left: 3px solid #FF3D00;
-  overflow:hidden;
-  z-index: 4;
+  
   transition:all 2s ease-in-out;
 }
 
 #secondLayer #identifier{
-  transform:skew(25deg,0) translatex(-200px);
-  height: 100%;
-  width: 100%;
+  
   transition:all 2s ease-in-out;
 }
 
 #thirdLayer{
-  position: absolute;
-  width:52.5%;
-  height:100%;
-  right:0;
-  transform:skew(-25deg,0);
-  background-color:rgb(97, 97, 97);
-  border-left: 3px solid #FF3D00;
-  overflow:hidden;
-  z-index: 5;
+ 
   transition:all 2s ease-in-out;
 }
 #thirdLayer #identifier{
-    transform:skew(25deg,0) translatex(-100px);
-    height: 100%;
-    width: 120%;
-    margin-left: -2rem;
+    
     transition:all 2s ease-in-out;
   }
 
 #thirdLayer #identifier Image{
-  position: absolute;
-  width:1440px;
-  right:0;
-  filter:blur(3px);
+  
   transition:all 2s ease-in-out;
 }
 
 #fourthLayer{
-  position: absolute;
-  width:calc( 25% + 8rem);
-  height:100%;
-  right:-8rem;
-  transform:skew(-25deg,0);
-  background-color:gray;
-  overflow: hidden;
-  border-left: 3px solid #FF3D00;
-  overflow:hidden;
+  
   transition:all 2s ease-in-out;
 }
 #fourthLayer #identifier{
-  transform:skew(25deg,0) translatex(-100px);
-  height: 100%;
-  width: 120%;
-  margin-left: -2rem;
+  
   transition:all 2s ease-in-out;
 }
 
 #thirdLayer #identifier Image{
-  position: absolute;
-  width:1440px;
-  right:0;
-  filter:blur(4px);
+  
   transition:all 2s ease-in-out;
 }
