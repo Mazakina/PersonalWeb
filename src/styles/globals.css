@@ -33,3 +33,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#projectsDisplay{
+  max-width: 80rem;
+  width: 80vw;
+  height: 35rem;
+  align-self: center;
+  margin: 7vh 0 0 ;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  position: relative;
+  border-top: 3px solid #FF3D00;
+  border-bottom: 3px solid #FF3D00;
+  border-right: 3px solid #FF5C28;
+  border-left: 3px solid #FF5C28;
+  border-radius: 5px;
+}

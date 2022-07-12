@@ -66,7 +66,7 @@ useEffect(() => {
         <div className={styles.underlineTwo}></div>
       </div>
 
-      <div className={`${styles.projectsDisplay}  + ${(animated ? styles.animatedOne:'')}`}>
+      <div id='projectsDisplay' className={`${styles.projectsDisplay}  + ${(animated ? styles.animatedOne:'')}`}>
 {/* display selected */}
         <div  className={styles.activeLayer}>
           <Image  layout="fill"  height='100%'src={allProjects[currentDisplay].backgroundImg}  alt=""/>
