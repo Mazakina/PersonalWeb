@@ -9,7 +9,7 @@ const routeChange = () => {
       },1 * 1000);
       tempFix()
   };
-
+}
 
 export const useTransitionFix = (): void => {
     useEffect(() => {
