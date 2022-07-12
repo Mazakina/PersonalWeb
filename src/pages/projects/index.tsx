@@ -1,10 +1,14 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Tool from '../../components/Tool'
 import styles from './projects.module.scss'
 import  Image  from 'next/image'
+import { useRouter } from 'next/router'
 
 export default function Projects(){
+
+  const {asPath} = useRouter()
+
 
   const allProjects = [
     {
@@ -36,15 +40,20 @@ export default function Projects(){
       language: 'React JS',
       site:'',
   }]
-
+  const [animated,setAnimated]= useState(false)
   const [active, setActive]= useState(true)
   const [currentDisplay,setCurrentDisplay] = useState(0)
+
 
   const onClickSetDisplay = (id)=>{
     if(active){return(setActive(false), setCurrentDisplay(id))}
     else{ return}
   }
   
+useEffect(() => {
+  setTimeout(()=>{setAnimated(true)}, 100)
+},[])
+
   return(
     <section className={styles.projects}>
       <div id='projectHeader' >
@@ -53,11 +62,11 @@ export default function Projects(){
         <div className={styles.underlineTwo}></div>
       </div>
 
-      <div className={styles.projectsDisplay}>
+      <div className={`${styles.projectsDisplay}  + ${(animated ? styles.animatedOne:'')}`}>
 {/* display selected */}
-        <motion.div  className={styles.activeLayer}>
+        <div  className={styles.activeLayer}>
           <Image  layout="fill"  height='100%'src={allProjects[currentDisplay].backgroundImg}  alt=""/>
-          <motion.div  className={styles.descriptionBox}>
+          <div className={`${styles.descriptionBox} + ${(animated ? styles.animatedOne:'')}`}>
             <h2>
               IgNews
             </h2>
@@ -71,35 +80,35 @@ export default function Projects(){
               <button><a target="_blank"  rel="noreferrer" href={allProjects[currentDisplay].site}>Visite o site</a></button>
               <button>GitHub</button>
             </div>
-          </motion.div>
+          </div>
           <button onClick={()=>setActive(true)} > <Image width='32' height='32' src="/images/shelfIcon.svg" alt="" /></button>
-        </motion.div>
+        </div>
 
 {/* display all */}
-        <motion.a href="#"  onClick={()=>{onClickSetDisplay(0)}} className={`${styles.firstLayer} +  ${(active ? '':styles.deactive)}`}>
+        <a href="#"  onClick={()=>{onClickSetDisplay(0)}} className={`${styles.firstLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
             <Image className={styles.layerImage} layout="fill"src={allProjects[0].backgroundImg} alt="" />
-        </motion.a>
+        </a>
 
-        <motion.a href="#"   onClick={()=>{onClickSetDisplay(1)}} className={`${styles.secondLayer} +  ${(active ? '':styles.deactive)}`}>
-          <div className={styles.identifier}>
+        <a href="#"   onClick={()=>{onClickSetDisplay(1)}} className={`${styles.secondLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
+          <div className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
             <Image className={styles.layerImage} layout='fill'src={allProjects[1].backgroundImg} alt=""/>
             <h3>HTML & CSS</h3>
           </div>
-        </motion.a>
+        </a>
 
-        <motion.a href="#" onClick={()=>{onClickSetDisplay(2)}} className={`${styles.thirdLayer} +  ${(active ? '':styles.deactive)}`}>
-          <div className={styles.identifier}>
+        <a href="#" onClick={()=>{onClickSetDisplay(2)}} className={`${styles.thirdLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
+          <div className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
             <Image className={styles.layerImage} layout="fill" src={allProjects[2].backgroundImg} alt=""/>
             <h3>Java Script</h3>
           </div>       
-        </motion.a>
+        </a>
         
-        <motion.a href="#" onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)}`}>    
-          <div className={styles.identifier}>
+        <a href="#" onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>    
+          <div className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
             <Image  className={styles.layerImage} layout='fill' src={allProjects[3].backgroundImg} alt="" />
             <h3>React JS</h3>
           </div>    
-        </motion.a>
+        </a>
       </div>
       
     </section>
