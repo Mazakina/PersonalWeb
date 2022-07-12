@@ -9,6 +9,23 @@ import { AppProps } from 'next/app'
 
 
 function MyApp({ Component, pageProps }:AppProps ) {
+
+  const routeChange = () => {
+    // Temporary fix to avoid flash of unstyled content
+
+
+    const tempFix = () => {
+      const allStyleElems = document.querySelectorAll('style[media="x"]');
+      allStyleElems.forEach((elem) => {
+        elem.removeAttribute("media");
+      });
+    };
+    tempFix();
+  };
+
+  Router.events.on("routeChangeComplete", routeChange );
+   Router.events.on("routeChangeStart", routeChange );
+
   const {asPath} = useRouter()
   const [opacity, cycle ] = useCycle(0, 50, 100)
   return (
