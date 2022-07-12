@@ -160,7 +160,6 @@
       height: 100%;
       background-color:rgb(206, 206, 206);
       z-index: 3;
-      transition: all  0.7s ease-in-out;
       >Image{
         position: absolute;
         width:1440px;
@@ -181,7 +180,6 @@
       transform:skew(-25deg,0);
       border-left: 3px solid #FF3D00;
       overflow:hidden;
-      transition: all  0.7s ease-in-out;
       z-index: 4;
 
         >.identifier{
@@ -222,7 +220,6 @@
       background-color:rgb(97, 97, 97);
       border-left: 3px solid #FF3D00;
       overflow:hidden;
-      transition: all  0.7s ease-in-out;
       z-index: 5;
       >.identifier{
         transform:skew(25deg,0) translatex(-100px);
@@ -261,7 +258,6 @@
       overflow: hidden;
       border-left: 3px solid #FF3D00;
       overflow:hidden;
-      transition: all  0.7s ease-in-out;
       z-index: 6;
       >.identifier{
         transform:skew(25deg,0) translatex(-100px);
