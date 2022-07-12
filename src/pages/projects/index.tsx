@@ -55,7 +55,7 @@ export default function Projects(){
 
       <div className={styles.projectsDisplay}>
 {/* display selected */}
-        <motion.div  className={styles.activeLayer}>
+        <div  className={styles.activeLayer}>
           <Image  layout="fill"  height='100%'src={allProjects[currentDisplay].backgroundImg}  alt=""/>
           <div className={styles.descriptionBox}>
             <h2>
@@ -73,7 +73,7 @@ export default function Projects(){
             </div>
           </div>
           <button onClick={()=>setActive(true)} > <Image width='32' height='32' src="/images/shelfIcon.svg" alt="" /></button>
-        </motion.div>
+        </div>
 
 {/* display all */}
         <a href="#"  onClick={()=>{onClickSetDisplay(0)}} className={`${styles.firstLayer} +  ${(active ? '':styles.deactive)}`}>
