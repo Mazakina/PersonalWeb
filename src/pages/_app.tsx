@@ -4,13 +4,13 @@ import styles from '../styles/Home.module.scss'
 import SideNav from '../components/SideNav'
 import Transition from '../components/Transition'
 import { useRouter } from 'next/router'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useCycle  } from 'framer-motion'
 import { AppProps } from 'next/app'
 
 
 function MyApp({ Component, pageProps }:AppProps ) {
   const {asPath} = useRouter()
-
+  const [opacity, cycle ] = useCycle(0, 50, 100)
   return (
       <div className={styles.container}>
         <Transition asPath={asPath}/>
@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }:AppProps ) {
             transition={{
               duration:1
             }}
+            onTap={() => cycle()}
             >
             <Component {...pageProps} />
           </motion.div>
