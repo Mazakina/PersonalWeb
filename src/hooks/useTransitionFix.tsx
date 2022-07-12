@@ -4,10 +4,10 @@ import { useEffect } from 'react';
 const routeChange = () => {
     const tempFix = () => {
         const allStyleElems = document.querySelectorAll('style[media="x"]');
-        allStyleElems.forEach((elem) => {
+        setTimeout(() => {allStyleElems.forEach((elem) => {
             elem.removeAttribute('media');
-        });
-    };
+        }},1 * 1000);
+      };
     tempFix();
 };
 
@@ -26,3 +26,4 @@ export const useTransitionFix = (): void => {
         Router.router?.push(Router.router?.pathname);
     }, []);
 };
+
