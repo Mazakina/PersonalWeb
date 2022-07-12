@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }:AppProps ) {
 
   return (
       <div className={styles.container}>
+        <Transition asPath={asPath}/>
         <Header/>
         <SideNav/>
         <AnimatePresence initial={false}>
