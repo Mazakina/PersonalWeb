@@ -15,7 +15,7 @@
   margin: .2rem auto ;
   color: #A9A9A9;
   z-index: 2;
-
+  list-style-type: none;
   .homeButton{
     margin-right:1.5rem
   }
@@ -31,9 +31,9 @@
     border-radius: 3px;
   }
 
-  div{
+  li{
       letter-spacing: .2rem;
-  
+      
     a{
       margin-left: 2rem;
       font-size: 1.125rem;

@@ -1,15 +1,11 @@
-import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Tool from '../../components/Tool'
 import styles from './projects.module.scss'
 import  Image  from 'next/image'
 import { useRouter } from 'next/router'
 
 export default function Projects(){
-
   const {asPath} = useRouter()
-
-
   const allProjects = [
     {
       id:0,
@@ -40,23 +36,15 @@ export default function Projects(){
       language: 'React JS',
       site:'',
   }]
-  const [animated,setAnimated]= useState(true)
   const [active, setActive]= useState(true)
   const [currentDisplay,setCurrentDisplay] = useState(0)
 
+ var animated = asPath!=='/projects#'
 
   const onClickSetDisplay = (id)=>{
     if(active){return(setActive(false), setCurrentDisplay(id))}
     else{ return}
   }
-  
-useEffect(() => {
-  if(asPath!== '/projects'){
-    setAnimated(false)
-  }else{
-    setAnimated(true)
-  }
-},[asPath])
 
   return(
     <section className={styles.projects}>
@@ -67,7 +55,6 @@ useEffect(() => {
       </div>
 
       <div id='projectsDisplay' className={`${styles.projectsDisplay}  + ${(animated ? styles.animatedOne:'')}`}>
-{/* display selected */}
         <div id='activeLayer' className={styles.activeLayer}>
           <Image  layout="fill"  height='100%'src={allProjects[currentDisplay].backgroundImg}  alt=""/>
           <div id='descriptionBox' className={`${styles.descriptionBox} + ${(animated ? styles.animatedOne:'')}`}>
@@ -94,21 +81,21 @@ useEffect(() => {
         </a>
 
         <a href="#"  id='secondLayer' onClick={()=>{onClickSetDisplay(1)}} className={`${styles.secondLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
-          <div id='identifier' className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
+          <div id='identifier' className={`${styles.identifier} + ${styles.animatedFive}`}>
             <Image className={styles.layerImage} layout='fill'src={allProjects[1].backgroundImg} alt=""/>
             <h3>HTML & CSS</h3>
           </div>
         </a>
 
         <a href="#" id='thirdLayer' onClick={()=>{onClickSetDisplay(2)}} className={`${styles.thirdLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
-          <div id='identifier' className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
+          <div id='identifier' className={`${styles.identifier} + ${styles.animatedFive}`}>
             <Image className={styles.layerImage} layout="fill" src={allProjects[2].backgroundImg} alt=""/>
             <h3>Java Script</h3>
           </div>       
         </a>
         
         <a href="#"  id='fourthLayer' onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>    
-          <div id='identifier' className={`${styles.identifier} + ${(animated ? styles.animatedFive:'')}`}>
+          <div id='identifier' className={`${styles.identifier} + ${styles.animatedFive}`}>
             <Image  className={styles.layerImage} layout='fill' src={allProjects[3].backgroundImg} alt="" />
             <h3>React JS</h3>
           </div>    

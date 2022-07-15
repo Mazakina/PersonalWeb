@@ -7,8 +7,6 @@ interface TransitionProps {
 }
 
 export default function Transition({asPath}:TransitionProps){
-  const [isAnimating, setIsAnimating] = useState(true)
-  const asPath2 = asPath
   const control = useAnimation()
 
   const [path, setPath] = useState('')

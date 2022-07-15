@@ -15,9 +15,7 @@ const routeChange = () => {
 }
 
 export const useTransitionFix = () => {
-  console.debug(
-    'WARNING: Still using FOUC temp fix on route change.  Has the Next.js bug not been fixed?  See https://github.com/vercel/next.js/issues/17464',
-  )
+
   useEffect(() => {
     Router.events.on('routeChangeComplete', routeChange)
     Router.events.on('routeChangeStart', routeChange)
