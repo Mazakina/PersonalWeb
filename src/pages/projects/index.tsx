@@ -39,7 +39,8 @@ export default function Projects(){
   const [active, setActive]= useState(true)
   const [currentDisplay,setCurrentDisplay] = useState(0)
 
- var animated = asPath!=='/projects#'
+ var animated = asPath ===('/projects#' ||'/projects')
+ console.log(animated)
 
   const onClickSetDisplay = (id)=>{
     if(active){return(setActive(false), setCurrentDisplay(id))}
