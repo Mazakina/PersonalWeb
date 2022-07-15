@@ -96,7 +96,7 @@ export default function Projects(){
         
         <a href="#" id='fourthLayer' onClick={()=>{onClickSetDisplay(3)}} className={`${styles.fourthLayer} +  ${(active ? '':styles.deactive)} + ${(animated ? styles.animatedSeven:'')}`}>
           <div id='identifier' className={`${styles.identifier} + ${styles.animatedFive}`}>
-            <Image  className={styles.layerImage} layout='fill' src={allProjects[3].backgroundImg} alt="" />
+            <Image id='imageSlow' className={styles.layerImage} layout='fill' src={allProjects[3].backgroundImg} alt="" />
             <h3>React JS</h3>
           </div>    
         </a>

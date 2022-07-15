@@ -47,7 +47,7 @@ a {
 #thirdLayer,
 #thirdLayer #identifier,
 #thirdLayer #identifier Image,
-#fourthLayer #fourthLayer #identifier,
+#fourthLayer, #fourthLayer #identifier,
 #thirdLayer #identifier Image{
   transition:all 4s ease-in-out;
 }
