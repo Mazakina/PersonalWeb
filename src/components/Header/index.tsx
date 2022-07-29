@@ -9,16 +9,7 @@ import { useInitialLoad } from '../../contexts/InitalLoad';
 export default function Header (){
 
     const {asPath} = useInitialLoad()
-    const [windowWidth, setWindowWidth] =useState(1440)
-    if(typeof window !== 'undefined'){
-        const { innerWidth: width, innerHeight: height } = window;
-        const handleResize = () =>{
-            setWindowWidth(window.innerWidth)
-        }
-        window.addEventListener('resize', handleResize,false)
-        window.addEventListener("load", handleResize, false);
-    }
-
+   
     const gitStyle={
         marginBottom:'-1px',
     }

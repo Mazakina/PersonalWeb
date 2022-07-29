@@ -7,16 +7,19 @@
   justify-content: space-around;
   align-items: center;
   font-family: anton;
-  font-size: 1.125rem;
   letter-spacing: .2rem;
 
   position: absolute;
   padding-right:2rem;
+  font-size: 1.5rem;
   margin: .2rem auto ;
   color: #A9A9A9;
   z-index: 2;
   list-style-type: none;
+
+
   .homeButton{
+    font-size: 1.5rem;
     margin-right:1.5rem
   }
 
@@ -69,13 +72,5 @@
   transform:rotateX(30%) translateY(-5px);
 }
 
-
-
-
-@media(max-width:970px){
-  .nav{
-    display:none;
-  }
-}
 
 

@@ -1,3 +1,18 @@
+@keyframes pulse {
+  from{
+    transform: scale(0.9);
+    filter:opacity(.6);
+
+  }
+  to{
+    transform: scale(1.1);
+    filter:opacity(.0);
+
+
+  }
+}
+
+
 .aboutMe{
   height: 100vh;
   width: 100vw;
@@ -7,18 +22,95 @@
   flex-flow: column;
   background-color: #090D11;
 
-  h2{
+  >h2{
     margin-right: auto;
     margin-bottom: 1.5rem;
     font-family: anton;
     letter-spacing:.2rem;
     margin-left: 22vw;
   }
+
   .aboutBox{
+  padding:1rem;
+
     width:60vw;
     height:50vh;
     background-color: #77ffef52;
     border-radius: 5px;
     margin-bottom:5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+ 
+
+    .leftContent{
+      grid-column: 1;
+      h2{
+        display:block;
+      }
+    }
+
+
+    .center{
+      display: flex;
+      flex-flow:column;
+      justify-content: center;
+      height:100%;
+      width: 100%;
+      grid-column: 2;
+
+      .division{
+        height:50%;
+        border-left: 1px solid white;
+        margin: 1rem auto;
+      }
+
+      .imageBorder{
+        transition: all 0.5 ease-in-out;    
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        &::before{
+          z-index: 2;
+          display: block;
+          width:210px;
+          height:210px;
+          background: center no-repeat url('/images/personal2.png') ;
+          background-size: 100% auto;
+          content: '';
+        }
+        &::after{
+          position: absolute;
+          width:220px;
+          height:220px;
+          background-image: url('/images/whiteFilter.png');
+          background-size: 100% auto;
+          transform-origin: center;
+          animation: pulse 2s linear infinite;
+          top:-5px;
+          filter:opacity(.2);
+          content:'';
+        }
+
+      }
+    }
+    
+  }
+}
+
+@media (max-width:760px){
+
+  .aboutMe{
+    h2{
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+    .aboutBox{
+      width:90vw;
+      height:90%;
+      margin-bottom:1rem;
+    }
   }
 }

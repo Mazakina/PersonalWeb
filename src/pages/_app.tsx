@@ -8,6 +8,8 @@ import { AnimatePresence, motion  } from 'framer-motion'
 import { AppProps } from 'next/app'
 import { useTransitionFix } from '../hooks/useTransitionFix'
 import { InitialLoadProvider } from '../contexts/InitalLoad'
+import { useState } from 'react'
+import ModalHeader from '../components/ModalHeader'
 
 
 function MyApp({ Component, pageProps }:AppProps ) {
@@ -16,6 +18,15 @@ useTransitionFix()
 
   const {asPath} = useRouter()
   // const [opacity, cycle ] = useCycle(0, 50, 100)
+  const [windowWidth, setWindowWidth] = useState(0)
+  if(typeof window !== 'undefined'){
+      const { innerWidth: width, innerHeight: height } = window;
+      const handleResize = () =>{
+          setWindowWidth(window.innerWidth)
+      }
+      window.addEventListener('resize', handleResize,false)
+      window.addEventListener("load", handleResize, false);
+  }
 
 
 
@@ -23,7 +34,7 @@ useTransitionFix()
     <InitialLoadProvider>
       <div className={styles.container}>
         <Transition asPath={asPath}/>
-        <Header/>
+        {windowWidth > 760? <Header/>:<ModalHeader/>}
         <SideNav/>
         <AnimatePresence initial={false}>
           <motion.div  

@@ -98,9 +98,17 @@
 
 }
 
-@media (max-width:720px){
+@media (max-width:900px){
   .centerContent{
     left: -9rem;
-    top: 2rem;
+    top: 5%;
+  }  
+}
+
+@media (max-width:500px){
+  .centerContent{
+    left: -7rem;
+    top: 0;
+   transform: scale(0.7);
   }  
 }

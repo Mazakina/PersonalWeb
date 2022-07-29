@@ -11,14 +11,15 @@ export default function Projects(){
       id:0,
       backgroundImg:'/images/projeto1.png',
       tools:['reactJs','html'],
-      title:'',
+      title:'Portfolio',
       language:'HTML & CSS',
-      site:''
+      site:'/#',
+      description:' Projeto em React e Next Js, utiliziando Api de Framer Motion para criar transições simples e criativas. Um trabalho que ,como eu, esta sempre em desenvolvimento',
     },{
       id:1,
       backgroundImg:'/images/htmlImg.png',
       tools:['html'],
-      title:'',
+      title:'Personal Blog',
       language:'HTML & CSS',
       site:'',
   },{
@@ -28,6 +29,7 @@ export default function Projects(){
       title:'IgNews',
       language: 'Next JS',
       site:'https://ignite-ig-news-main.vercel.app/',
+      description:' Trabalho em Next Js para entrega de conteudo DEV com preview antes de se inscrever. Criado com Stripe para pagamentos, Next Auth para validação, e Prismic como CMS '
   },{
       id:3,
       backgroundImg:'/images/projeto2.png',
@@ -60,9 +62,9 @@ export default function Projects(){
           <img height='100%'src={allProjects[currentDisplay].backgroundImg}  alt=""/>
           <div id='descriptionBox' className={`${styles.descriptionBox} + ${(animated ? styles.animatedOne:'')}`}>
             <h2>
-              IgNews
+              {allProjects[currentDisplay].title}
             </h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi excepturi esse ex odit saepe ipsam facere beatae similique doloremque quo quidem tempore quas molestias, commodi corporis natus possimus atque voluptatem?</p>
+            <p>{allProjects[currentDisplay].description}</p>
 
             <div className={styles.iconComponent}>
               <Tool  imgArray={allProjects[currentDisplay].tools} />
