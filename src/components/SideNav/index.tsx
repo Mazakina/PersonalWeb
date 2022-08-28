@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from './SideNav.module.scss'
 
@@ -29,11 +30,11 @@ export default function SideNav(){
     
     >
       <motion.div className={styles.navLine}></motion.div>
-      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}> <div className={navIconClass('/')}></div></motion.li>
-      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}> <div className={styles.navIcon}></div></motion.li>
-      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}> <div className={navIconClass('/projects')}></div></motion.li>
-      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}> <div className={styles.navIcon}></div></motion.li>
-      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}> <div className={navIconClass('/aboutMe')}></div></motion.li>
+      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}><Link href={'/'}><div className={navIconClass('/')}/></Link></motion.li>
+      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}> <div className={styles.navIcon_noRef}></div></motion.li>
+      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}><Link href={'/projects'}><div className={navIconClass('/projects')}/></Link></motion.li>
+      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}> <div className={styles.navIcon_noRef}></div></motion.li>
+      <motion.li variants={item} initial="hidden" animate="show" className={styles.navItem}><Link href={'/aboutMe'}><div className={navIconClass('/aboutMe')}/></Link></motion.li>
     </motion.ul>
   )
 }

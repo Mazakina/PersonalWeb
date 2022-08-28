@@ -6,7 +6,7 @@
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
-  font-family: anton;
+  font-family:  noto-sans;
   letter-spacing: .2rem;
 
   position: absolute;
@@ -20,7 +20,7 @@
 
   .homeButton{
     font-size: 1.5rem;
-    margin-right:1.5rem
+    margin-right:-2rem
   }
 
   &::after{
@@ -51,7 +51,7 @@
       margin-left: 4rem;
     }
     &:first-child{
-      font-family: fascinate;
+      font-family:  noto-sans;
       letter-spacing: -.0rem;
       font-size: 1.125rem;
       color:#A9A9A9;

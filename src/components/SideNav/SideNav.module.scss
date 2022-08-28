@@ -30,8 +30,19 @@
       height: 8px;
       transform: rotate(45deg);
       transition: all 0.5 ease-in-out;    
-    }
+      cursor: pointer;
+      &:hover{
+        background: rgb(243, 243, 243);
 
+      }
+    }
+    .navIcon_noRef{
+      width: 8px;
+      background: rgb(129, 129, 129);
+      height: 8px;
+      transform: rotate(45deg);
+      transition: all 0.5 ease-in-out;    
+    }
     .navIcon_active{
       background: rgba(28, 60, 85, 0.514);
       border: 1px #fff  solid;

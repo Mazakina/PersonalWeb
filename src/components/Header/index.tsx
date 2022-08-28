@@ -53,7 +53,7 @@ export default function Header (){
             initial="hidden"
             animate="show"
             >
-             <Link href="/">HOME</Link>
+             <Link href="/" >HOME </Link>
             </motion.li>
             <motion.li
             variants={item}

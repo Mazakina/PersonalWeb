@@ -27,13 +27,9 @@
   background-color:#090D11;
   width: 100vw;
 
-  // background-image: url('/images/Back.png');
-  // background-position: center -5rem;
-  // background-repeat: no-repeat;
-  // background-size:1920px;
   
   h1{
-    font-family: anton;
+    font-family:  noto-sans;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -48,13 +44,13 @@
   .underline{
     border-bottom: 3px solid white;
     border-radius: 2px;
-    width:70px;
+    width:90px;
     margin-left:-.7rem;
   }
   .underlineTwo{
     border-bottom: 3px solid white;
     border-radius: 2px;
-    width:70px;
+    width:90px;
     margin-left:auto;
     margin-right: -.4rem;
     margin-top: 0.4rem;
@@ -198,6 +194,7 @@
       z-index: 4;
 
         >.identifier{
+          font-family:  noto-sans;
           transform:skew(25deg,0) translatex(-200px);
           // transition: all .5s ease-in-out;
           height: 100%;
@@ -213,7 +210,7 @@
             left: 17rem;
             z-index: 20;
             top:100px;
-            height:7rem;
+            height:8rem;
           }
           .layerImage{
             position: absolute;
@@ -238,6 +235,7 @@
       // transition: all  0.7s ease-in-out;
       z-index: 5;
       >.identifier{
+        font-family:  noto-sans;
         transform:skew(25deg,0) translatex(-100px);
         // transition: all .5s ease-in-out;
         height: 100%;
@@ -277,6 +275,7 @@
       // transition: all  0.7s ease-in-out;
       z-index: 6;
       >.identifier{
+          font-family:  noto-sans;
         transform:skew(25deg,0) translatex(-100px);
         // transition: all .5s ease-in-out;
         height: 100%;

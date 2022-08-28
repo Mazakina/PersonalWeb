@@ -14,7 +14,7 @@ export default function Projects(){
       title:'Portfolio',
       language:'HTML & CSS',
       site:'/#',
-      description:' Projeto em React e Next Js, utiliziando Api de Framer Motion para criar transições simples e criativas. Um trabalho que ,como eu, esta sempre em desenvolvimento',
+      description:' Projeto em React e Next Js, utiliziando Api de Framer Motion para criar transições simples. Um trabalho sempre em desenvolvimento',
     },{
       id:1,
       backgroundImg:'/images/htmlImg.png',

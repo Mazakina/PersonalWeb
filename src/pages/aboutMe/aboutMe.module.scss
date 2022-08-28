@@ -7,8 +7,6 @@
   to{
     transform: scale(1.1);
     filter:opacity(.0);
-
-
   }
 }
 
@@ -24,45 +22,54 @@
 
   >h2{
     margin-right: auto;
+    font-size: 28px;
     margin-bottom: 1.5rem;
-    font-family: anton;
-    letter-spacing:.2rem;
+    font-family: noto-sans;
+    letter-spacing:1px;
     margin-left: 22vw;
   }
 
   .aboutBox{
   padding:1rem;
+  width:70vw;
+  height:50vh;
+  min-height: 460px;
+  background-color: #33ffe752;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 2fr;
+  gap:2rem;
 
-    width:60vw;
-    height:50vh;
-    background-color: #77ffef52;
-    border-radius: 5px;
-    margin-bottom:5rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
- 
-
+  
     .leftContent{
       grid-column: 1;
-      h2{
-        display:block;
+      .description{
+        margin: .7rem 0 0 .5rem ;  
+        p{
+          padding: 1.5rem 5rem .7rem 1.5rem;
+          font-size: 18px;
+          font-family: nato-sans;
+        }
+      }
+      .description::before {
+        width:28rem;
+        height:16rem;
+        position:absolute;
+        content:'';
+        background: no-repeat center url(/images/leftAbt.svg) ;
+        background-size: 100% 100%;
       }
     }
-
-
-    .center{
-      display: flex;
-      flex-flow:column;
-      justify-content: center;
+    .centerContent{
       height:100%;
       width: 100%;
       grid-column: 2;
-
-      .division{
-        height:50%;
-        border-left: 1px solid white;
-        margin: 1rem auto;
+      padding-top: 5.4rem;
+      .midAbt{
+        margin-bottom: -6.95rem;
       }
+
 
       .imageBorder{
         transition: all 0.5 ease-in-out;    
@@ -97,6 +104,17 @@
       }
     }
     
+    .rightContent{
+      >p{
+        font-size: 24px;
+        margin: 8.55rem 0 1rem 8rem;        
+        font-family: nato-sans;
+        letter-spacing: 2px;
+      }    
+      .imageJourney{
+        width:370px
+      }
+    }
   }
 }
 
