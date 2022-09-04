@@ -22,8 +22,8 @@ export default function Transition({asPath}:TransitionProps){
       setPath(asPath)
     } else{ 
     control.start({
-      width: ['0vw','130vw','130vw','100vw'],
-      opacity:[1,1,1],
+      width: ['0vw','130vw','130vw','100vw','0vw'],
+      opacity:[1,1,1,0],
       x: ['0%','0%','100%'] ,
       borderRight: ['solid 10px #77ffef52','solid 500px #77ffef52','solid 500px #77ffef52','solid 50vw #77ffef52'],
       left:['0%','0%','0%','50%','100%'] 

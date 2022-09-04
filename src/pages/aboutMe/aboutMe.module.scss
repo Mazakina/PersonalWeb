@@ -12,6 +12,7 @@
 
 
 .aboutMe{
+  position:relative;
   height: 100vh;
   width: 100vw;
   display:flex;
@@ -23,6 +24,7 @@
   >h2{
     margin-right: auto;
     font-size: 28px;
+    font-weight: 500;
     margin-bottom: 1.5rem;
     font-family: noto-sans;
     letter-spacing:1px;
@@ -43,7 +45,7 @@
 
   
     .leftContent{
-      grid-column: 1;
+      position: relative;
       .description{
         margin: .7rem 0 0 .5rem ;  
         p{
@@ -59,6 +61,28 @@
         content:'';
         background: no-repeat center url(/images/leftAbt.svg) ;
         background-size: 100% 100%;
+      }
+
+      .openModalButton{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position:absolute;
+        bottom:40px;
+        >button{
+          cursor: pointer;
+          margin: 0;
+          border: 3px solid white;
+          border-radius: 3px;
+          background-color: rgba(24, 24, 24, 0.404);
+          color: white;
+          padding: .5rem;
+          width: 40%;
+          font-size: 20px;
+          font-family: nato-sans;
+
+
+        }
       }
     }
     .centerContent{
@@ -116,6 +140,62 @@
       }
     }
   }
+
+  .formModal{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#0000009d;
+    z-index: 4;
+    form{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 3;
+      background-color:#292929;
+      width: 350px;
+      border-radius: 5px;
+      padding: 1rem .5rem;
+      z-index: 5;
+      >p{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      input,textarea{
+        font-weight: 500;
+        font-size:1.1rem;
+        background:#1a1a1a;
+        padding:.5rem;
+        margin-top:1rem;
+        border:none;
+        border-radius: 2px;
+        width: 80%;
+      }
+  
+      textarea{
+        min-height:150px;
+      }
+    
+      button{
+        color:white;
+        background-color: rgb(23, 179, 171);
+        border:none;
+        border-radius: 2px;
+        padding: .5rem;
+        margin-top:1rem;
+        margin-bottom:.7rem;
+        width: 80%;
+  
+      }
+    }
+  }
+
 }
 
 @media (max-width:760px){
