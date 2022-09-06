@@ -50,7 +50,8 @@
       .description{
         margin: .7rem 0 0 .5rem ;  
         p{
-          padding: 1.5rem 4rem .7rem 1.5rem;
+          width:400px;
+          padding: 1.5rem  0 .7rem 1.5rem;
           font-size: 18px;
           font-family: nato-sans;
         }
@@ -231,38 +232,27 @@
     display:none;
   }
 }
-@media (max-width:760px){
 
+@media (max-width:1080px){
   .aboutMe{
     h2{
       margin-bottom: 1rem;
       margin-top: 1rem;
     }
-    .aboutBox{
-      width:90vw;
-      height:90%;
-      margin-bottom:1rem;
-      grid-template-columns:1fr;
-      gap:0;
+      .aboutBox{
+        width:30rem;
+        height:90%;
+        margin-bottom:1rem;
+        grid-template-columns:1fr;
+        gap:0;
     }
-  }
-  .leftContent{
-    position: relative;
-    .description{
-      margin: .7rem 0 0 .5rem ;  
+    .centerContent{
+      display:none;
+    }
+    .rightContent{
       p{
-        padding: 0.5rem;
-        font-size: 18px;
-        font-family: nato-sans;
+      margin:0 !important;
       }
-    }
-  }
-  .centerContent{
-    display:none;
-  }
-  .rightContent{
-    p{
-     margin:0 !important;
     }
   }
 }
