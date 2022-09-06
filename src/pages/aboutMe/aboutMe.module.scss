@@ -12,6 +12,7 @@
 
 
 .aboutMe{
+  
   position:relative;
   height: 100vh;
   width: 100vw;
@@ -36,7 +37,7 @@
   width:70vw;
   height:50vh;
   min-height: 460px;
-  background-color: #33ffe752;
+  background-color: #0F5075;
   border-radius: 5px;
   margin-bottom: 3rem;
   display: grid;
@@ -49,7 +50,7 @@
       .description{
         margin: .7rem 0 0 .5rem ;  
         p{
-          padding: 1.5rem 5rem .7rem 1.5rem;
+          padding: 1.5rem 4rem .7rem 1.5rem;
           font-size: 18px;
           font-family: nato-sans;
         }
@@ -131,7 +132,7 @@
     .rightContent{
       >p{
         font-size: 24px;
-        margin: 8.55rem 0 1rem 8rem;        
+        margin: 9.1rem 0 1rem 8rem;        
         font-family: nato-sans;
         letter-spacing: 2px;
       }    
@@ -148,8 +149,9 @@
     position:absolute;
     width: 100%;
     height: 100%;
-    background-color:#0000009d;
+    background-color:#000000c9;
     z-index: 4;
+    transition: all 10s ease-in-out;
     form{
       display: flex;
       flex-flow: column;
@@ -157,9 +159,9 @@
       align-items: center;
       position: absolute;
       z-index: 3;
-      background-color:#292929;
+      background-color: rgb(34, 34, 34);;
       width: 350px;
-      border-radius: 5px;
+      border-radius: 2px;
       padding: 1rem .5rem;
       z-index: 5;
       >p{
@@ -175,7 +177,8 @@
         margin-top:1rem;
         border:none;
         border-radius: 2px;
-        width: 80%;
+        width: 90%;
+        color:white;
       }
   
       textarea{
@@ -184,13 +187,13 @@
     
       button{
         color:white;
-        background-color: rgb(23, 179, 171);
+        background-color: rgb(27, 119, 68);
         border:none;
         border-radius: 2px;
         padding: .5rem;
         margin-top:1rem;
         margin-bottom:.7rem;
-        width: 80%;
+        width: 90%;
   
       }
     }
@@ -198,6 +201,36 @@
 
 }
 
+@media (max-width:1860px){
+  .aboutMe{
+    h2{
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+    .aboutBox{
+      width:80vw;
+      margin-bottom:1rem;
+    }
+  }
+}
+
+@media (max-width:1480px){
+  .aboutMe{
+    h2{
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+    .aboutBox{
+      width:90vw;
+      margin-bottom:1rem;
+      grid-template-columns:1fr 1fr;
+      gap:0;
+    }
+  }
+  .centerContent{
+    display:none;
+  }
+}
 @media (max-width:760px){
 
   .aboutMe{
@@ -209,6 +242,27 @@
       width:90vw;
       height:90%;
       margin-bottom:1rem;
+      grid-template-columns:1fr;
+      gap:0;
+    }
+  }
+  .leftContent{
+    position: relative;
+    .description{
+      margin: .7rem 0 0 .5rem ;  
+      p{
+        padding: 0.5rem;
+        font-size: 18px;
+        font-family: nato-sans;
+      }
+    }
+  }
+  .centerContent{
+    display:none;
+  }
+  .rightContent{
+    p{
+     margin:0 !important;
     }
   }
 }

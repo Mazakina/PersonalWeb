@@ -5,15 +5,18 @@ import { useState } from 'react';
 
 export default function AboutMe (){
 
+  const [name, setName]= useState('')
+  const [email, setEmail]= useState('')
+  const [comment, setComment]= useState('')
   function handleClick(event) {
     event.stopPropagation();
     console.log(event)
     return false;
   }
   const [modalState, setModalState] = useState(false)
-  async function handleOnSubmit(e){
+  async function handleOnSubmit(event){
     event.preventDefault();
-    const formData={}
+    const formData = {}
   }
 return(
   <section className={styles.aboutMe}>
@@ -27,9 +30,9 @@ return(
 
       <div className={styles.leftContent}>
         <div className={styles.description}>
-          <p> &nbsp; Sou Paulo Mazakina, Desenvolvedor <br/>Front-end, Aspirante a Designer. 
-          <br/><br/>&nbsp;Sempre fui conectado com Tecnologia e Arte, inclusive minhas graduaçoes sempre foram voltadas pra isso, a programação foi onde pude expressar minha logica de forma criativa.<br/>
-            &nbsp;Tendo em mente a criaçao de codigos limpos,  performance e a experiencia do usuario.<br/> 
+          <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sou Paulo Mazakina,<br/> Desenvolvedor Front-end, Aspirante a designer. 
+          <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sempre fui conectado com Arte e Tecnologia, inclusive minhas graduaçoes sempre foram voltadas pra isso, a programação foi onde pude expressar minha logica de forma criativa.<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tendo em mente a criaçao de codigos limpos,  performance e a experiencia do usuario.<br/> 
           </p>
         </div>
         <div className={styles.openModalButton}>
@@ -49,23 +52,32 @@ return(
       </div>
     </motion.div>
 
-    { modalState ? 
-    <div className={styles.formModal} onClick={()=>{setModalState(false)}}>
+    { modalState && 
+    <div  className={styles.formModal} onClick={()=>{setModalState(false)}}>
       <form method='post' onSubmit={handleOnSubmit}  onClick={(e)=>{handleClick(e)}}>
         <p>
-          <input type="text" placeholder="Nome" name='name'></input>
+          <input type="text"
+          value={name} 
+          onChange={(event)=>{setName(event.target.value)}} 
+          placeholder="Nome" name='name'></input>
         </p>
         <p>
-          <input type="email" placeholder="E-mail" name='email'></input>
+          <input value={email} 
+          onChange={(event)=>{setEmail(event.target.value)}} 
+          type="email" placeholder="E-mail" name='email'></input>
         </p>
         <p>
-          <textarea placeholder="Me mande uma mensagem, tambem aceito opniões sobre algo que eu possa melhorar!"  name='message'/>
+          <textarea 
+          value={comment} 
+          onChange={(event)=>{setComment(event.target.value)}} 
+          placeholder="Me mande uma mensagem, tambem aceito opniões sobre algo que eu possa melhorar!"  
+          name='message'/>
         </p>
         <p>
           <button type="submit">Enviar</button>
         </p>
       </form>
-    </div>: ''}
+    </div>}
   </section>
 )
 }

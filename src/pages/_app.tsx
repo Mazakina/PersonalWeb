@@ -18,7 +18,7 @@ useTransitionFix()
 
   const {asPath} = useRouter()
   // const [opacity, cycle ] = useCycle(0, 50, 100)
-  const [windowWidth, setWindowWidth] = useState(0)
+  const [windowWidth, setWindowWidth] = useState(1440)
   if(typeof window !== 'undefined'){
       const { innerWidth: width, innerHeight: height } = window;
       const handleResize = () =>{
