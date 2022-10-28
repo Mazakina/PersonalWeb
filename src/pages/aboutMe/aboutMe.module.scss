@@ -79,7 +79,7 @@
           background-color: rgba(24, 24, 24, 0.404);
           color: white;
           padding: .5rem;
-          width: 40%;
+          width: 11rem;
           font-size: 20px;
           font-family: nato-sans;
 
@@ -246,13 +246,26 @@
         grid-template-columns:1fr;
         gap:0;
     }
+    .openModalButton{
+     bottom: 10px !important;
+    }
     .centerContent{
       display:none;
     }
     .rightContent{
+
       p{
-      margin:0 !important;
+      margin:0 0 1rem 5rem !important;
       }
     }
+  }
+}
+@media (max-height:800px){
+  .aboutMe{
+    height: 760px !important;
+    overflow: scroll;
+  }
+  .openModalButton{
+    display:none !important;
   }
 }
