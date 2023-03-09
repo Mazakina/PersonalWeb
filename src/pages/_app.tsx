@@ -14,7 +14,6 @@ import ModalHeader from '../components/ModalHeader'
 
 function MyApp({ Component, pageProps }:AppProps ) {
 
-useTransitionFix()
 
   const {asPath} = useRouter()
   // const [opacity, cycle ] = useCycle(0, 50, 100)
@@ -22,7 +21,7 @@ useTransitionFix()
   if(typeof window !== 'undefined'){
       const { innerWidth: width, innerHeight: height } = window;
       const handleResize = () =>{
-          setWindowWidth(window.innerWidth)
+        setWindowWidth(window.innerWidth)
       }
       window.addEventListener('resize', handleResize,false)
       window.addEventListener("load", handleResize, false);

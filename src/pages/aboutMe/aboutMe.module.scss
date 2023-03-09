@@ -10,34 +10,79 @@
   }
 }
 
+.scrolled{
+  cursor:url('./../../../public/images/mouse.gif')
+}
+
+.parallax {
+  overflow: hidden !important;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  width: 100vw;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallaxSpan {
+  display: block;
+  margin-right: 30px;
+  font-family: "Plaster",sans-serif;
+    font-size:5rem;
+    color:rgb(189, 19, 146);
+}
+
+
 
 .aboutMe{
-  
   position:relative;
-  height: 100vh;
-  width: 100vw;
   display:flex;
   justify-content: center;
   align-items: center;
+  max-width: 100vw;
   flex-flow: column;
   background-color: #090D11;
+  // 090D11
 
-  >h2{
-    margin-right: auto;
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    font-family: noto-sans;
-    letter-spacing:1px;
-    margin-left: 22vw;
+  .backTextContainer{
+    padding-top: 80vh;
+    padding-bottom: 80vh;
+    position: relative;
+  }
+  .backText{
+    font-family: "Plaster",sans-serif;
+    font-size:5rem;
+    color:rgb(0, 221, 173);
   }
 
   .aboutBox{
   padding:1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width:70vw;
   height:50vh;
   min-height: 460px;
-  background-color: #0F5075;
+  padding: 20px;
+  background-image: radial-gradient(
+  rgba(0, 0, 0, 0) 1px,
+  #06080a 1px
+  );
+  // 06080a
+  background-size: 4px 4px;
+  backdrop-filter: blur(10px);
   border-radius: 5px;
   margin-bottom: 3rem;
   display: grid;
@@ -82,12 +127,11 @@
           width: 11rem;
           font-size: 20px;
           font-family: nato-sans;
-
-
         }
       }
     }
     .centerContent{
+      position: relative;
       height:100%;
       width: 100%;
       grid-column: 2;
@@ -95,8 +139,16 @@
       .midAbt{
         margin-bottom: -6.95rem;
       }
-
-
+      h2{
+        top:0;
+        left:26%;
+        position: absolute;
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        font-family: noto-sans;
+        letter-spacing:1px;
+      }
       .imageBorder{
         transition: all 0.5 ease-in-out;    
         position: relative;
@@ -223,7 +275,6 @@
     }
     .aboutBox{
       width:90vw;
-      margin-bottom:1rem;
       grid-template-columns:1fr 1fr;
       gap:0;
     }
@@ -247,23 +298,64 @@
         gap:0;
     }
     .openModalButton{
-     bottom: 10px !important;
+      display:none !important;
     }
     .centerContent{
       display:none;
     }
     .rightContent{
-
+      margin:auto 0;
       p{
       margin:0 0 1rem 5rem !important;
       }
     }
   }
 }
-@media (max-height:800px){
+@media (max-width:450px){
   .aboutMe{
-    height: 760px !important;
-    overflow: scroll;
+    .aboutBox{
+      overflow: auto;
+      width:100vw;
+      .leftContent{
+        border-top:3px solid white;
+        border-bottom:3px solid white;
+        padding-bottom:1rem;
+        height: fit-content;
+        .description{
+          p{
+            width: 90vw;
+            padding:0;
+          }
+        }
+        .openModalButton{
+          display: none;
+        }
+      }
+      .rightContent{
+        .imageJourney{
+          transform: scale(0.8);
+          margin-left: -1.5rem;
+          width: 100vw;
+        }
+      }
+      .description::before {
+        content:none !important;
+      }
+    }
+  }
+}
+@media (max-height:500){
+
+  .aboutMe{
+    .backTextContainer{
+      padding: 0;
+      height: 100vh;
+    }
+    .aboutBox{
+      overflow: auto;
+    }
+
+
   }
   .openModalButton{
     display:none !important;

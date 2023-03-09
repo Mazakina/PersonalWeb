@@ -18,7 +18,22 @@
   cursor:default;
 }
 
+.arrowUp{
+  margin-top: 60px;
+  position: relative;
+}
+.arrowDown{
+  margin-top: auto;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.displayNone{
+  opacity: 0 !important;
+}
+
 .projects{
+
   display:flex;
   flex-flow: column;
   height: 100vh;
@@ -33,7 +48,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
-    margin-top:7rem;
+    margin-top:.5rem;
     color: #C5C5C5;
     letter-spacing: 0.05em;
     span{
@@ -120,7 +135,10 @@
         }
 
         >div{
-          margin: auto 0 2rem;
+          margin: auto 0 2rem ;
+        }
+        .buttonContainer{
+          margin: auto 0 2rem 2rem;
           >button{
             padding:.5rem;
             font-weight: bold;
@@ -136,7 +154,8 @@
       >img{
         width:1440px;
         height: 100%;
-
+        object-fit: cover;
+        object-position: center;
       }
       >button{
         display:flex;
@@ -308,7 +327,12 @@
 
 
 @media (max-width:760px){
-  
+  .arrowUp{
+    display:none;
+  }
+  .arrowDown{
+    display:none;
+  }
   .projects{
     h1{
       margin-top:2rem ;
@@ -328,4 +352,26 @@
     width:calc( 25% + 9rem) !important;
   }
 
+}
+
+@media (max-width:450px){
+  .projects{
+    .projectsDisplay{
+      .descriptionBox{
+        width: 106vw !important;
+        min-width: 300px !important;
+      }
+    }
+  }
+}
+
+@media (max-width:340px){
+  .projects{
+    .projectsDisplay{
+      .descriptionBox{
+        width: 110vw !important;
+        min-width: 300px !important;
+      }
+    }
+  }
 }
