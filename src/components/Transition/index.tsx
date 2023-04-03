@@ -4,7 +4,7 @@ import styles from './Transition.module.scss'
 import { NextRouter } from 'next/router'
 
 
-export default function Transition({router}:NextRouter){
+export default function Transition(router:NextRouter){
   const control = useAnimation()
 
   const [path, setPath] = useState('')
