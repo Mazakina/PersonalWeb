@@ -35,17 +35,11 @@ function MyApp({ Component, pageProps }:AppProps ) {
         <Transition asPath={asPath}/>
         {windowWidth > 760? <Header/>:<ModalHeader/>}
         <SideNav/>
-        <AnimatePresence initial={false}>
+        <AnimatePresence  mode="wait" initial={false}>
           <motion.div  
             style={{position:'absolute',}}
             key={asPath}
-            initial={{opacity:0,
-            }}
-            animate={{opacity:[0,0,0,1,1]}}
-            exit={{opacity:0}}
-            transition={{
-              duration:1,
-            }}
+
             // onTap={() => cycle()}
             >
             <Component {...pageProps} />
