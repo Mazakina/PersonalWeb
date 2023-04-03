@@ -1,10 +1,18 @@
-import * as S from './styles'
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
+import styles from './Arrows.module.scss'
 
-
-export function Arrow({arrowDirection}:S.IArrowProps){
+export function ArrowUp({extendStyleName=''}){
   return (
-    <S.Container >
-      <S.Icon arrowDirection={arrowDirection} />
-    </S.Container>
+    <div className={`${extendStyleName} ${styles.container}`}>
+      <MdKeyboardArrowUp size={'42px'} className={`${styles.icon} ${styles.arrowUp}`} />
+    </div>
+  )
+}
+
+export function ArrowDown({extendStyleName=''}){
+  return (
+    <div className={`${extendStyleName} ${styles.container}`}>
+      <MdKeyboardArrowDown size={'42px'} className={`${styles.icon} ${styles.arrowDown}`} />
+    </div>
   )
 }
