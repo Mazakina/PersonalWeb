@@ -41,10 +41,10 @@ function MyApp({ Component, pageProps }:AppProps ) {
             key={router.asPath}
             initial={{opacity:0,
             }}
-            animate={{opacity:[0,0,0,1,1]}}
+            animate={{opacity:[0,0,1]}}
             exit={{opacity:0}}
             transition={{
-              duration:.2,
+              duration:.5,
             }}
             // onTap={() => cycle()}
             >
