@@ -2,10 +2,9 @@ import { motion, useAnimation } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import styles from './Transition.module.scss'
 import { NextRouter } from 'next/router'
-import { BaseRouter } from 'next/dist/shared/lib/router/router'
 
 
-export default function Transition(router:BaseRouter){
+export default function Transition(router:NextRouter){
   const control = useAnimation()
 
   const [path, setPath] = useState('')
