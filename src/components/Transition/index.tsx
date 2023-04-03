@@ -5,7 +5,7 @@ import { NextRouter } from 'next/router'
 
 import { useRouter } from 'next/router'
 
-export default function Transition(push:string){
+export default function Transition(){
   const control = useAnimation()
   const router = useRouter()
 

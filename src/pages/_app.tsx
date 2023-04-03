@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }:AppProps ) {
   return (
     <InitialLoadProvider>
       <div className={styles.container}>
-        <Transition />
+        <Transition  />
         {windowWidth > 760? <Header/>:<ModalHeader/>}
         <SideNav/>
         <AnimatePresence  mode="wait" initial={false}>
