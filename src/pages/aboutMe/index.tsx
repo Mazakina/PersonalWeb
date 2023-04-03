@@ -1,6 +1,5 @@
 import {
   motion,
-// @ts-ignore
   useScroll,
   useSpring,
   useTransform,

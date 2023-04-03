@@ -3,35 +3,14 @@ import styles from '../styles/Home.module.scss'
 import SvgGrid from '../components/Grid/index'
 import { useInitialLoad } from '../contexts/InitalLoad';
 import { CurrentImageProvider } from '../contexts/CurrentImage';
-import { useEffect, useRef, useState } from 'react';
-import { useRouter } from 'next/router'
-import { pageChangeOnScroll } from '../utils/pageChangeOnScroll';
-import { ArrowDown } from '../components/Arrows/Arrows';
+
 
 export default function Home() {
-  const router = useRouter()
-  const homePageRef = useRef<HTMLDivElement>()
-  const [stateTick,setStateTick] = useState(0)
-  let isThrottled = false;
-  let lastDirection = 0
-  let tickCount = 0
-  useEffect(()=>{  
-    pageChangeOnScroll({
-      ref:homePageRef,
-      isThrottled: isThrottled,
-      lastDirection: lastDirection,
-      router: router,
-      tickCount: tickCount,
-      nextAdress:'/projects',
-      setTickCount:setStateTick,
-    })
-  },[])
-  const [isScrolled,setIsScrolled] = useState(false)
-  const className = `${stateTick!==0? '': styles.displayNone}`
 
+  const {isInitialLoad} = useInitialLoad()
   return (
         <CurrentImageProvider >
-          <section ref={homePageRef} className={styles.home}>
+          <section className={styles.home}>
             <div className={styles.centerContent}>
                     <SvgGrid className={styles.options} />
     
@@ -43,7 +22,6 @@ export default function Home() {
                 <p>Desenvolvedor Front-End.</p>
               </div>             
             </div>
-          <ArrowDown extendStyleName={`${styles.arrowDown} ${className}`} />
           </section>
         </CurrentImageProvider>
         )   

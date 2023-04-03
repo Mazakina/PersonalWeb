@@ -14,6 +14,7 @@ import ModalHeader from '../components/ModalHeader'
 
 function MyApp({ Component, pageProps }:AppProps ) {
 
+useTransitionFix()
 
   const {asPath} = useRouter()
   // const [opacity, cycle ] = useCycle(0, 50, 100)
@@ -21,7 +22,7 @@ function MyApp({ Component, pageProps }:AppProps ) {
   if(typeof window !== 'undefined'){
       const { innerWidth: width, innerHeight: height } = window;
       const handleResize = () =>{
-        setWindowWidth(window.innerWidth)
+          setWindowWidth(window.innerWidth)
       }
       window.addEventListener('resize', handleResize,false)
       window.addEventListener("load", handleResize, false);
@@ -35,16 +36,16 @@ function MyApp({ Component, pageProps }:AppProps ) {
         <Transition asPath={asPath}/>
         {windowWidth > 760? <Header/>:<ModalHeader/>}
         <SideNav/>
-        <AnimatePresence  mode="wait" initial={false}>
+        <AnimatePresence initial={false}>
           <motion.div  
-            style={{position:'absolute',}}
             key={asPath}
             initial={{opacity:0,
+              position:'absolute',
             }}
             animate={{opacity:[0,0,0,1,1]}}
             exit={{opacity:0}}
             transition={{
-              duration:.2,
+              duration:1,
             }}
             // onTap={() => cycle()}
             >

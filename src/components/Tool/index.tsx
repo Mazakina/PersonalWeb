@@ -20,9 +20,6 @@ export default function Tool({imgArray}:toolProps) {
   },{
     id:'stripe',
     img:'/images/stripe.svg'
-  },{
-    id:'typescript',
-    img:'/images/typescript.svg'
   }]
   const newArray = toolsIcons.filter((icon) => {
     return(
@@ -35,7 +32,7 @@ export default function Tool({imgArray}:toolProps) {
         newArray.map((tool)=>{
           return(
             <div key={tool.id} className={styles.tool}>
-              <img src={tool.img} alt={tool.id} />
+              <img src={tool.img} alt="" />
             </div>
           )
         })

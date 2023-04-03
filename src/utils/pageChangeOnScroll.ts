@@ -2,7 +2,7 @@ import { NextRouter } from "next/router";
 import { Dispatch, MutableRefObject, SetStateAction } from "react";
 
 interface IPageChangeOnScroll{
-  ref:MutableRefObject<HTMLDivElement>,
+  ref:MutableRefObject<HTMLDivElement | undefined>,
   tickCount:number,
   setTickCount:Dispatch<SetStateAction<number>>,
   lastDirection:number,
