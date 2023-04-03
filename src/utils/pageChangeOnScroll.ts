@@ -28,14 +28,14 @@ export function pageChangeOnScroll({ref,tickCount,lastDirection,isThrottled,rout
       setTickCount((tickCount) => Math.round(deltaY/100))
       tickCount += Math.round(deltaY/100)
     }
-    if (tickCount >= 2 && nextAdress) {
+    if (tickCount >= 1 && nextAdress) {
       router.push(nextAdress);
 
       tickCount = 0; 
       setTickCount(0)
 
     }
-    if(tickCount <= -2 && prevAdress) {
+    if(tickCount <= -1 && prevAdress) {
       router.push(prevAdress);
       tickCount = 0; 
       setTickCount(0)

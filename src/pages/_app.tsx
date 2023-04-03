@@ -37,9 +37,9 @@ function MyApp({ Component, pageProps }:AppProps ) {
         <SideNav/>
         <AnimatePresence initial={false}>
           <motion.div  
+            style={{position:'absolute',}}
             key={asPath}
             initial={{opacity:0,
-              position:'absolute',
             }}
             animate={{opacity:[0,0,0,1,1]}}
             exit={{opacity:0}}

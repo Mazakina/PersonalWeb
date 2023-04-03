@@ -16,6 +16,7 @@ export default function Projects(){
   let tickCount = 0
   const PageRef = useRef<HTMLDivElement>()
   const [stateTick,setStateTick] = useState(0)
+  
   useEffect(()=>{  
     const pageScrollConfig={
       ref:PageRef,
