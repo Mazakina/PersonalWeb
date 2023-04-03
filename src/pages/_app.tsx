@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }:AppProps ) {
 useTransitionFix()
 
   // const [opacity, cycle ] = useCycle(0, 50, 100)
-  const router = useRouter()
+  const {asPath} = useRouter()
 
   const [windowWidth, setWindowWidth] = useState(1440)
   if(typeof window !== 'undefined'){
@@ -39,23 +39,14 @@ useTransitionFix()
         <SideNav/>
         <AnimatePresence initial={false}>
           <motion.div  
-<<<<<<< HEAD
             key={asPath}
-=======
-            style={{position:'absolute',}}
-            key={router.asPath}
->>>>>>> 80c8144d52098923655be130db3a6c3a151e8985
             initial={{opacity:0,
               position:'absolute',
             }}
             animate={{opacity:[0,0,1]}}
             exit={{opacity:0}}
             transition={{
-<<<<<<< HEAD
               duration:1,
-=======
-              duration:.5,
->>>>>>> 80c8144d52098923655be130db3a6c3a151e8985
             }}
             // onTap={() => cycle()}
             >

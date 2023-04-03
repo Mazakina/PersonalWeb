@@ -1,13 +1,10 @@
 import { SvgTriangle, SvgTriangleImg } from '../components/SvgTriangle';
 import styles from '../styles/Home.module.scss'
 import SvgGrid from '../components/Grid/index'
-import { useInitialLoad } from '../contexts/InitalLoad';
 import { CurrentImageProvider } from '../contexts/CurrentImage';
 
 
 export default function Home() {
-
-  const {isInitialLoad} = useInitialLoad()
   return (
         <CurrentImageProvider >
           <section className={styles.home}>
