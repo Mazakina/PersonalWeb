@@ -1,7 +1,6 @@
 import { motion, useAnimation } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import styles from './Transition.module.scss'
-import { NextRouter } from 'next/router'
 
 import { useRouter } from 'next/router'
 
@@ -9,7 +8,8 @@ export default function Transition(){
   const control = useAnimation()
   const router = useRouter()
 
-  const [path, setPath] = useState('')
+
+  const [path, setPath] = useState<string>()
 
   useEffect(() => {
     if (!path) {
@@ -22,7 +22,10 @@ export default function Transition(){
   }, [control, path, router.asPath]);
 
   useEffect(() => {
-    const handleBeforeHistoryChange = (url) => {
+    if(!path){
+      return
+    }
+    const handleRouteChangeStart = (url) => {
       control.start({
         width: ['0vw', '130vw', '0vw'],
         opacity: [1, 1, 1, 0],
@@ -32,7 +35,7 @@ export default function Transition(){
       setPath(url);
     };
 
-    router.events.on('beforeHistoryChange', handleBeforeHistoryChange);
+    router.events.on('routeChangeStart', handleRouteChangeStart);
 
   }, [control, router]);
 

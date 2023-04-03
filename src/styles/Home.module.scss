@@ -8,6 +8,13 @@
   background-position: center -5rem;
   background-repeat: no-repeat;
   background-size:1920px;
+  overflow: -moz-scrollbars-none;
+  overflow-y: scroll; 
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+  &::-webkit-scrollbar {
+     display: none;
+  }
 }
 .home{
   width: 100vw;
@@ -16,7 +23,6 @@
   display: flex;
   justify-content: center;
   position: relative;
-  // overflow: hidden;
 
 }
 .displayNone{

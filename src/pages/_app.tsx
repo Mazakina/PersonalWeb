@@ -8,13 +8,14 @@ import { AnimatePresence, motion  } from 'framer-motion'
 import { AppProps } from 'next/app'
 import { useTransitionFix } from '../hooks/useTransitionFix'
 import { InitialLoadProvider } from '../contexts/InitalLoad'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import ModalHeader from '../components/ModalHeader'
 
 
 function MyApp({ Component, pageProps }:AppProps ) {
+  const containerRef = useRef<HTMLDivElement>(null);
 
-useTransitionFix()
+  useTransitionFix()
 
   // const [opacity, cycle ] = useCycle(0, 50, 100)
   const {asPath} = useRouter()
@@ -33,7 +34,7 @@ useTransitionFix()
 
   return (
     <InitialLoadProvider>
-      <div className={styles.container}>
+      <div  ref={containerRef}  className={styles.container}>
         <Transition  />
         {windowWidth > 760? <Header/>:<ModalHeader/>}
         <SideNav/>
@@ -50,7 +51,7 @@ useTransitionFix()
             }}
             // onTap={() => cycle()}
             >
-            <Component {...pageProps} />
+            <Component {...pageProps} container={containerRef} />
           </motion.div>
         </AnimatePresence>
       </div>
