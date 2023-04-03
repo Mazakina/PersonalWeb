@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react'
 import styles from './Transition.module.scss'
 import { NextRouter } from 'next/router'
 
+import { useRouter } from 'next/router'
 
-export default function Transition(router:NextRouter){
+export default function Transition(){
   const control = useAnimation()
+  const router = useRouter()
 
   const [path, setPath] = useState('')
 
