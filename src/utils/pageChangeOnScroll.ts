@@ -13,6 +13,7 @@ interface IPageChangeOnScroll{
 }
 
 export function pageChangeOnScroll({ref,tickCount,lastDirection,isThrottled,router,nextAdress,setTickCount,prevAdress}:IPageChangeOnScroll){
+  const TickCountVariable = 2
   ref.current.addEventListener('wheel', (event) => {
     const deltaY = event.deltaY
     let currentDirection = deltaY > 0? -1 : 1
@@ -24,18 +25,18 @@ export function pageChangeOnScroll({ref,tickCount,lastDirection,isThrottled,rout
       isThrottled = true;
       setTimeout(function() {
         isThrottled = false; 
-      }, 300);
+      }, 200);
       setTickCount((tickCount) => Math.round(deltaY/100))
       tickCount += Math.round(deltaY/100)
     }
-    if (tickCount >= 1 && nextAdress) {
+    if (tickCount >= TickCountVariable && nextAdress) {
       router.push(nextAdress);
 
       tickCount = 0; 
       setTickCount(0)
 
     }
-    if(tickCount <= -1 && prevAdress) {
+    if(tickCount <= -TickCountVariable && prevAdress) {
       router.push(prevAdress);
       tickCount = 0; 
       setTickCount(0)

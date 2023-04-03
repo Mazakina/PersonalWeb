@@ -39,7 +39,13 @@ function MyApp({ Component, pageProps }:AppProps ) {
           <motion.div  
             style={{position:'absolute',}}
             key={asPath}
-
+            initial={{opacity:0,
+            }}
+            animate={{opacity:[0,0,0,1,1]}}
+            exit={{opacity:0}}
+            transition={{
+              duration:.2,
+            }}
             // onTap={() => cycle()}
             >
             <Component {...pageProps} />
