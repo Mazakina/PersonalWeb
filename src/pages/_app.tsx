@@ -15,7 +15,7 @@ import ModalHeader from '../components/ModalHeader'
 function MyApp({ Component, pageProps }:AppProps ) {
 
 
-  const {asPath} = useRouter()
+  const router = useRouter()
   // const [opacity, cycle ] = useCycle(0, 50, 100)
   const [windowWidth, setWindowWidth] = useState(1440)
   if(typeof window !== 'undefined'){
@@ -32,13 +32,13 @@ function MyApp({ Component, pageProps }:AppProps ) {
   return (
     <InitialLoadProvider>
       <div className={styles.container}>
-        <Transition asPath={asPath}/>
+        <Transition router={router}/>
         {windowWidth > 760? <Header/>:<ModalHeader/>}
         <SideNav/>
         <AnimatePresence  mode="wait" initial={false}>
           <motion.div  
             style={{position:'absolute',}}
-            key={asPath}
+            key={router.asPath}
             initial={{opacity:0,
             }}
             animate={{opacity:[0,0,0,1,1]}}
