@@ -5,7 +5,7 @@ import { NextRouter } from 'next/router'
 
 import { useRouter } from 'next/router'
 
-export default function Transition(){
+export default function Transition(push:string){
   const control = useAnimation()
   const router = useRouter()
 
@@ -22,7 +22,7 @@ export default function Transition(){
   }, [control, path, router.asPath]);
 
   useEffect(() => {
-    const handleRouteChangeStart = (url) => {
+    const handleBeforeHistoryChange = (url) => {
       control.start({
         width: ['0vw', '130vw', '0vw'],
         opacity: [1, 1, 1, 0],
@@ -32,7 +32,7 @@ export default function Transition(){
       setPath(url);
     };
 
-    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('beforeHistoryChange', handleBeforeHistoryChange);
 
   }, [control, router]);
 
