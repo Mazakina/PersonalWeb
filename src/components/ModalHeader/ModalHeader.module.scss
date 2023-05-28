@@ -27,18 +27,20 @@
     margin-top:4rem;
   }
   >ul{
-    div{
+    margin-top: 3.5rem;
+    .division{
       width:80%;
       height:1px;
-      border-bottom:  1px solid white;
+      border-bottom:  1px solid rgba(255, 255, 255, 0.253);
       margin: 0 auto 0 1rem;
     }
     li{
       margin: 1rem 2rem 0.5rem ;
       list-style: none;
       font-size: 1.6rem;
-      font-family:  noto-sans, Arial, Helvetica, sans-serif;
-
+      font-family: noto-sans;
+      font-style: normal;
+      font-weight: 400;
     }
   }
 }

@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }:AppProps ) {
             animate={{opacity:[0,0,1]}}
             exit={{opacity:0}}
             transition={{
-              duration:1,
+              duration: 1.5 ,
             }}
             // onTap={() => cycle()}
             >

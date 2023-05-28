@@ -15,6 +15,7 @@ interface IPageChangeOnScroll{
 export function pageChangeOnScroll({ref,tickCount,lastDirection,isThrottled,router,nextAdress,setTickCount,prevAdress}:IPageChangeOnScroll){
   const TickCountVariable = 2
   ref.current.addEventListener('wheel', (event) => {
+    event.preventDefault()
     const deltaY = event.deltaY
     let currentDirection = deltaY > 0? -1 : 1
     if(currentDirection !== lastDirection){

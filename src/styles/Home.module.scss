@@ -4,9 +4,7 @@
   justify-content: center;
   color: white;
   height: 100vh;
-  background-image: url('/images/Back.png');
-  background-position: center -5rem;
-  background-repeat: no-repeat;
+  background-color:#090D11 ;
   background-size:1920px;
   overflow: -moz-scrollbars-none;
   overflow-y: scroll; 
@@ -15,6 +13,7 @@
   &::-webkit-scrollbar {
      display: none;
   }
+
 }
 .home{
   width: 100vw;
@@ -23,6 +22,10 @@
   display: flex;
   justify-content: center;
   position: relative;
+  background-image: url('/images/Back.png');
+  background-position: center -5rem;
+  background-repeat: no-repeat;
+  background-size:1920px;
 
 }
 .displayNone{
