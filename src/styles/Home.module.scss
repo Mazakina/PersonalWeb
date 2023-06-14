@@ -1,10 +1,11 @@
 
+
 .container {
   display: flex;
   justify-content: center;
   color: white;
-  height: 100vh;
   background-color:#090D11 ;
+  flex:1;
   background-size:1920px;
   overflow: -moz-scrollbars-none;
   overflow-y: scroll; 

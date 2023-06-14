@@ -1,16 +1,18 @@
 import '../styles/globals.css'
-import Header from '../components/Header/index'
 import styles from '../styles/Home.module.scss'
-import SideNav from '../components/SideNav'
-import Transition from '../components/Transition'
-import { useRouter } from 'next/router'
-import { AnimatePresence, motion  } from 'framer-motion'
-import { AppProps } from 'next/app'
+
 import { useTransitionFix } from '../hooks/useTransitionFix'
 import { InitialLoadProvider } from '../contexts/InitalLoad'
-import { useRef, useState } from 'react'
+
+import Header from '../components/Header/index'
+import SideNav from '../components/SideNav'
+import Transition from '../components/Transition'
 import ModalHeader from '../components/ModalHeader'
 
+import { AnimatePresence, motion  } from 'framer-motion'
+import { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+import { useRef, useState } from 'react'
 
 function MyApp({ Component, pageProps }:AppProps ) {
   const containerRef = useRef<HTMLDivElement>(null);
