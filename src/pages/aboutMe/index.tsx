@@ -10,7 +10,7 @@ import {
 import styles from './aboutMe.module.scss'
 import { useEffect, useRef, useState , MutableRefObject} from 'react';
 import { wrap } from "@motionone/utils";
-import { ModalForm } from "../../components/ModalForm";
+// import { ModalForm } from "../../components/ModalForm";
 
 interface Props {
   container:MutableRefObject<HTMLDivElement>
