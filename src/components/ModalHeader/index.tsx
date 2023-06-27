@@ -26,7 +26,7 @@ export default function ModalHome(){
           <div className={styles.division} />
           <li onClick={()=>setModalHeader(!modalHeader)}><Link href="/">HOME</Link></li>
           <div className={styles.division} />
-          <li onClick={()=>setModalHeader(!modalHeader)}><Link href="/projects">PROJECTS</Link></li>
+          <li onClick={()=>setModalHeader(!modalHeader)}><Link href="/projects">PROJETOS</Link></li>
           <div className={styles.division} />
           <li onClick={()=>setModalHeader(!modalHeader)}><Link href="/aboutMe">SOBRE MIM</Link></li>
           <div className={styles.division} />

@@ -60,7 +60,7 @@ export default function Header (){
             initial="hidden"
             animate="show"
             >
-                <Link href="/projects">PROJECTS</Link>
+                <Link href="/projects">PROJETOS</Link>
                 <Link href="/aboutMe">SOBRE MIM</Link>
             </motion.li>
         </motion.ul>

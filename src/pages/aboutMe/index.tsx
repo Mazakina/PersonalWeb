@@ -27,10 +27,10 @@ export default function AboutMe ({container}:Props){
       <motion.div
       className={styles.backTextContainer}>
         <ParallaxText containerRef={container} parallaxStyle={styles.parallaxSpanSecondLine} baseVelocity={4}>
-          Lorem ipsum dolor sit amet.
+          IMAGINE PLANEJE CRIE
         </ParallaxText>
         <ParallaxText containerRef={container} parallaxStyle={styles.parallaxSpan} baseVelocity={-4}>
-          Lorem ipsum dolor sit amet.
+          IMAGINE PLANEJE CRIE
         </ParallaxText>
       </motion.div>
 

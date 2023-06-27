@@ -45,16 +45,16 @@ export function SvgTriangleImg({className,sizeMultiplier , children, colors,offs
     const imagesArray = [
         {
           backgroundImg:'/images/projeto1.png',
-          type:'PROJECTS'
+          type:'PROJETOS'
         },{
           backgroundImg:'/images/htmlImg.png',
-          type:'PROJECTS'
+          type:'PROJETOS'
         },{
             backgroundImg:'/images/Rect1.png',
-            type:'PROJECTS'
+            type:'PROJETOS'
         },{
             backgroundImg:'/images/projeto2.png',
-            type:'PROJECTS'
+            type:'PROJETOS'
         },{
             backgroundImg:'/images/projeto1.png',
             type:''
