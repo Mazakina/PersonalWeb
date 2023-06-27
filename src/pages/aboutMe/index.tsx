@@ -62,9 +62,7 @@ export default function AboutMe ({container}:Props){
       </motion.div>
 
 
-      { modalState && 
-      <ModalForm setModalState={setModalState}/>
-      }
+
 
     </section>
   )
