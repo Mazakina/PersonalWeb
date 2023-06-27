@@ -1,4 +1,4 @@
-
+export{}
 // import { useForm, ValidationError } from '@formspree/react';
 // import styles from './modalForm.module.scss'
 // import { useState } from 'react';
