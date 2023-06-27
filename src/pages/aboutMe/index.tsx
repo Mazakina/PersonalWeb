@@ -23,6 +23,10 @@ export default function AboutMe ({container}:Props){
 
 
   return(
+    <>
+    <Head>
+      <title>Mazakina Dev | Projetos</title>
+    </Head>
     <section className={styles.aboutMe}>
       <motion.div
       className={styles.backTextContainer}>
@@ -60,11 +64,8 @@ export default function AboutMe ({container}:Props){
           <img alt='minha Jornada' className={styles.imageJourney} src="/images/journey.svg"/>
         </div>
       </motion.div>
-
-
-
-
     </section>
+    </>
   )
 }
 

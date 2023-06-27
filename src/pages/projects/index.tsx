@@ -77,6 +77,10 @@ export default function Projects(){
   }
   const className = `${stateTick!==0? '': styles.displayNone}`
   return(
+    <>
+    <Head>
+      <title>Mazakina Dev | Projetos</title>
+    </Head>
     <section ref={PageRef} className={styles.projects}>
       <ArrowUp extendStyleName={`${styles.arrowUp} ${className}`} />
       <div id='projectHeader' >
@@ -134,5 +138,6 @@ export default function Projects(){
       <ArrowDown extendStyleName={`${styles.arrowDown} ${className}`} />
 
     </section>
+    </>
   )
 }
