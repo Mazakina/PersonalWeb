@@ -44,7 +44,7 @@ export default function AboutMe ({container}:Props){
             </p>
           </div>
           <div className={styles.openModalButton}>
-            <button onClick={()=>{setModalState(true)}}>Contato</button>
+            {/* <button onClick={()=>{setModalState(true)}}>Contato</button> */}
           </div>
         </div>
 
