@@ -57,7 +57,7 @@ export default function AboutMe ({container}:Props){
 
         <div className={styles.rightContent}>
           <p>Minha Jornada</p>
-          <img alt='journey' className={styles.imageJourney} src="/images/journey.svg"/>
+          <img alt='minha Jornada' className={styles.imageJourney} src="/images/journey.svg"/>
         </div>
       </motion.div>
 
