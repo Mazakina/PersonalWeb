@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import Tool from '../../components/Tool'
 import styles from './projects.module.scss'
-import  Image  from 'next/image'
 import { useRouter } from 'next/router'
 import { pageChangeOnScroll } from '../../utils/pageChangeOnScroll'
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
 import { ArrowDown, ArrowUp } from '../../components/Arrows/Arrows'
+import Head from 'next/head'
 
 export default function Projects(){
   const {asPath} = useRouter()
@@ -77,11 +76,10 @@ export default function Projects(){
   }
   const className = `${stateTick!==0? '': styles.displayNone}`
   return(
-    <>
-    <Head>
-      <title>Mazakina Dev | Projetos</title>
-    </Head>
     <section ref={PageRef} className={styles.projects}>
+      <Head>
+        <title>Mazakina Dev | Projetos</title>
+      </Head>
       <ArrowUp extendStyleName={`${styles.arrowUp} ${className}`} />
       <div id='projectHeader' >
         <h1> PROJE<span>T</span>OS</h1>
@@ -138,6 +136,5 @@ export default function Projects(){
       <ArrowDown extendStyleName={`${styles.arrowDown} ${className}`} />
 
     </section>
-    </>
   )
 }

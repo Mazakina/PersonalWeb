@@ -10,6 +10,7 @@ import {
 import styles from './aboutMe.module.scss'
 import { useEffect, useRef, useState , MutableRefObject} from 'react';
 import { wrap } from "@motionone/utils";
+import Head from "next/head";
 // import { ModalForm } from "../../components/ModalForm";
 
 interface Props {
@@ -23,11 +24,10 @@ export default function AboutMe ({container}:Props){
 
 
   return(
-    <>
-    <Head>
-      <title>Mazakina Dev | Projetos</title>
-    </Head>
     <section className={styles.aboutMe}>
+      <Head>
+        <title>Mazakina Dev | Projetos</title>
+      </Head>
       <motion.div
       className={styles.backTextContainer}>
         <ParallaxText containerRef={container} parallaxStyle={styles.parallaxSpanSecondLine} baseVelocity={4}>
@@ -65,7 +65,6 @@ export default function AboutMe ({container}:Props){
         </div>
       </motion.div>
     </section>
-    </>
   )
 }
 
