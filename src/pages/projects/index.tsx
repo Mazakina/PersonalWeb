@@ -38,6 +38,7 @@ export default function Projects(){
       title:'Portfolio',
       language:'HTML & CSS',
       site:'/#',
+      github:'https://github.com/Mazakina/PersonalWeb',
       description:' Projeto em React e Next Js, utiliziando Api de Framer Motion para criar transições simples. Um trabalho sempre em desenvolvimento',
     },{
       id:1,
@@ -47,7 +48,8 @@ export default function Projects(){
       title:'Space Travel',
       language:'HTML & CSS',
       description:'Space Travel é um site informativo, feito para saciar algumas curiosidade dos amantes do espaço. Utilizando os fundamentos, sem framework, apenas HTML/CSS para criar uma experiencia responsiva e otimizada',
-      site:'',
+      site:'https://uss-enterprise.vercel.app/',
+      github:'https://github.com/Mazakina/UssEnterprise',
   },{
       id:2,
       backgroundImg:'/images/Rect1.png',
@@ -55,6 +57,7 @@ export default function Projects(){
       title:'IgNews',
       language: 'Next JS',
       site:'https://ignite-ig-news-main.vercel.app/',
+      github:'https://github.com/Mazakina/Ignite-IgNews-main',
       description:' Trabalho em Next Js para entrega de conteudo DEV com preview antes de se inscrever. Criado com Stripe para pagamentos, Next Auth para validação, e Prismic como CMS '
   },{
       id:3,
@@ -63,6 +66,7 @@ export default function Projects(){
       title:'Ink-Trail',
       language: 'React JS',
       site:'https://inktrail.vercel.app/',
+      github:'https://github.com/Mazakina/ArtMatch',
       description:`Aplicativo JAM-Stack, feito para que artistas brasileiros divulguem suas artes e possiveis clientes entrem em contato. Utilizando de um layout interativo onde se pode arrastar imagens para dentro de albums ou serem deletadas`,
   }]
   const [active, setActive]= useState(true)
@@ -101,7 +105,7 @@ export default function Projects(){
 
             <div className={styles.buttonContainer} >
               <button><a target="_blank"  rel="noreferrer" href={allProjects[currentDisplay].site}>Visite o site</a></button>
-              <button>GitHub</button>
+              <button><a target="_blank"  rel="noreferrer" href={allProjects[currentDisplay].github}>GitHub</a></button>
             </div>
           </div>
           <button onClick={()=>setActive(true)} > <img width='32' height='32' src="/images/shelfIcon.svg" alt="voltar as opções"/></button>
